@@ -4,8 +4,8 @@
   <meta name="generator" content="Hexo 5.4.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/archives/2022/03/"/>
+  
+  <link rel="canonical" href="http://example.com/2022/03/24/git/"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,20 +20,25 @@
   <meta content="红颜扑梦的主页" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1648109837284" as="style">
+  <link rel="preload" href="/css/style.css?time=1648109837248" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>归档：2022/3 - 红颜扑梦的主页</title>
-  <meta name="keywords" content="null">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="红颜扑梦的主页">
-<meta property="og:url" content="http://example.com/archives/2022/03/index.html">
+  <title>Git疑难解答 - 红颜扑梦的主页</title>
+  <meta name="keywords" content="Github,null">
+  <meta name="description" content="上传至服务器  source up.sh   部署到服务器  12hexo g -dhexo s   验证是否连接上Github ssh -T &amp;#103;&amp;#105;&amp;#116;&amp;#x40;&amp;#x67;&amp;#105;&amp;#116;&amp;#104;&amp;#x75;&amp;#98;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d; 回车看到：You’ve successfully authenticated, but Gi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git疑难解答">
+<meta property="og:url" content="http://example.com/2022/03/24/git/index.html">
 <meta property="og:site_name" content="红颜扑梦的主页">
+<meta property="og:description" content="上传至服务器  source up.sh   部署到服务器  12hexo g -dhexo s   验证是否连接上Github ssh -T &amp;#103;&amp;#105;&amp;#116;&amp;#x40;&amp;#x67;&amp;#105;&amp;#116;&amp;#104;&amp;#x75;&amp;#98;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d; 回车看到：You’ve successfully authenticated, but Gi">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-03-24T08:15:00.000Z">
+<meta property="article:modified_time" content="2022-03-24T08:17:01.522Z">
 <meta property="article:author" content="Hytianyi">
+<meta property="article:tag" content="Github">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <!-- feed -->
@@ -1654,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1648109837284" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1648109837284"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1648109837248" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1648109837248"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1726,7 +1731,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1648109837284","sites":"/js/plugins/sites.js?time=1648109837284","friends":"/js/plugins/friends.js?time=1648109837284","parallax":"/js/plugins/parallax.js?time=1648109837284","rightMenu":"/js/plugins/rightMenu.js?time=1648109837284","contributors":"/js/plugins/contributors.js?time=1648109837284","message":"/js/thirdparty/message.js?time=1648109837284","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648109837284","search":"/js/search/hexo.js?time=1648109837284"},"css":{"style":"/css/style.css?time=1648109837284","message":"/css/message.css?time=1648109837284"}},
+    cdn: {"js":{"app":"/js/app.js?time=1648109837248","sites":"/js/plugins/sites.js?time=1648109837248","friends":"/js/plugins/friends.js?time=1648109837248","parallax":"/js/plugins/parallax.js?time=1648109837248","rightMenu":"/js/plugins/rightMenu.js?time=1648109837248","contributors":"/js/plugins/contributors.js?time=1648109837248","message":"/js/thirdparty/message.js?time=1648109837248","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648109837248","search":"/js/search/hexo.js?time=1648109837248"},"css":{"style":"/css/style.css?time=1648109837248","message":"/css/message.css?time=1648109837248"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
     lastupdate: new Date('Thu Mar 24 2022 16:17:17 GMT+0800 (中国标准时间)'),
     sidebar: {
@@ -2111,7 +2116,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- Custom Files head end-->
 </head>
   <body itemscope itemtype="http://schema.org/WebPage">
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2380,7 +2385,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
 
@@ -2455,25 +2460,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/24/git/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="红颜扑梦的主页">
@@ -2483,96 +2470,235 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/03/24/git/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         Git疑难解答
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%88%86%E7%B1%BB1/">分类1</a>
     
-      
-        上传至服务器
- source up.sh
-
-
-部署到服务器
- 12hexo g -dhexo s
-
-
-验证是否连接上Github
-ssh -T &#103;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d; 回车看到：You’ve successfully authenticated, but...
-      
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%88%86%E7%B1%BB1/" itemprop="url"><span itemprop="name">分类1</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-03-24T16:15:00+08:00">2022-03-24</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%88%86%E7%B1%BB1/">分类1</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%88%86%E7%B1%BB1/" itemprop="url"><span itemprop="name">分类1</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-03-24T16:15:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年3月24日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="上传至服务器"><a href="#上传至服务器" class="headerlink" title="上传至服务器"></a>上传至服务器</h2><div class="story post-story"><blockquote>
+<p> <code>source up.sh</code></p>
+</blockquote>
+<hr>
+</div><h2 id="部署到服务器"><a href="#部署到服务器" class="headerlink" title="部署到服务器"></a>部署到服务器</h2><div class="story post-story"><blockquote>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+</div><h2 id="验证是否连接上Github"><a href="#验证是否连接上Github" class="headerlink" title="验证是否连接上Github"></a>验证是否连接上Github</h2><div class="story post-story"><blockquote>
+<p>ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;">&#103;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;</a><br> 回车看到：You’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。</p>
+</blockquote>
+<hr>
+</div><h2 id="【Git】ssh-connect-to-host-github-com-port-22-Connection-refused错误"><a href="#【Git】ssh-connect-to-host-github-com-port-22-Connection-refused错误" class="headerlink" title="【Git】ssh: connect to host github.com port 22: Connection refused错误"></a>【Git】ssh: connect to host github.com port 22: Connection refused错误</h2><div class="story post-story"><p>描述：<br>过程：在.ssh文件夹下创建“config”后，输入以下内容</p>
+<blockquote>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User hongyanpumeng@gmail.com  //此处的邮箱应填为注册GitHub时的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+</div><h2 id="【Git】SSL-certificate-problem-unable-to-get-local-issuer-certificate错误"><a href="#【Git】SSL-certificate-problem-unable-to-get-local-issuer-certificate错误" class="headerlink" title="【Git】SSL certificate problem: unable to get local issuer certificate错误"></a>【Git】SSL certificate problem: unable to get local issuer certificate错误</h2><div class="story post-story"><p>描述：【博客园】无法使用 Git clone<br>过程：这是由于当你通过HTTPS访问Git远程仓库的时候，如果服务器上的SSL证书未经过第三方机构认证，git就会报错。原因是因为未知的没有签署过的证书意味着可能存在很大的风险。解决办法就是通过下面的命令将git中的sslverify关掉</p>
+<blockquote>
+<p> 解决方法<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/guang_s/article/details/110471236">https://blog.csdn.net/guang_s/article/details/110471236</a></p>
+</blockquote>
+<hr>
+</div><h2 id="【Git】SSL-certificate-problem-unable-to-get-local-issuer-certificate错误-1"><a href="#【Git】SSL-certificate-problem-unable-to-get-local-issuer-certificate错误-1" class="headerlink" title="【Git】SSL certificate problem: unable to get local issuer certificate错误"></a>【Git】SSL certificate problem: unable to get local issuer certificate错误</h2><div class="story post-story"><p>描述：博客园<br>过程：</p>
+<blockquote>
+<p> 解决方法<br> <a target="_blank" rel="noopener" href="https://www.cnblogs.com/jaxu/p/12027839.html">https://www.cnblogs.com/jaxu/p/12027839.html</a></p>
+</blockquote>
+<hr>
+</div><h2 id="【Git】如何用git上传代码到github详细步骤"><a href="#【Git】如何用git上传代码到github详细步骤" class="headerlink" title="【Git】如何用git上传代码到github详细步骤"></a>【Git】如何用git上传代码到github详细步骤</h2><div class="story post-story"><p>描述：CSDN<br>过程：</p>
+<blockquote>
+<p> 解决方法：<br> <a target="_blank" rel="noopener" href="https://blog.csdn.net/zeng092210/article/details/95622318">https://blog.csdn.net/zeng092210/article/details/95622318</a></p>
+</blockquote>
+</div><h2 id="【Git】连接远程仓库"><a href="#【Git】连接远程仓库" class="headerlink" title="【Git】连接远程仓库"></a>【Git】连接远程仓库</h2><div class="story post-story"><p>描述：博客园<br>过程：</p>
+<blockquote>
+<p> 解决方法：<br> <a target="_blank" rel="noopener" href="https://www.cnblogs.com/zeo-to-one/p/8367801.html">https://www.cnblogs.com/zeo-to-one/p/8367801.html</a></p>
+</blockquote>
+</div><h2 id="【Git】链接远程仓库"><a href="#【Git】链接远程仓库" class="headerlink" title="【Git】链接远程仓库"></a>【Git】链接远程仓库</h2><div class="story post-story"><p>描述：菜鸟教程<br>过程：</p>
+<blockquote>
+<p> 解决方法：<br> <a target="_blank" rel="noopener" href="https://www.runoob.com/git/git-remote-repo.html">https://www.runoob.com/git/git-remote-repo.html</a></p>
+</blockquote>
+
+</div>
+  </div>
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2022/03/24/git/' itemprop="url">
-            阅读全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://example.com/2022/03/24/git/>http://example.com/2022/03/24/git/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-03-24T16:17:01+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年3月24日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/22/cainiao/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="红颜扑梦的主页">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="红颜扑梦的主页">
-    <meta itemprop="description" content="">
-  </span>
+          
   
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/03/22/cainiao/"  itemprop="url">
-        2022年3月22日
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Github/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Github</p></a></div>
+  <span hidden itemprop="keywords">Github</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        一级标题二级标题三级标题四级标题五级标题六级标题Markdown 段落文字换行需要在上一行末尾添加两个空格
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/03/24/git/&title=Git疑难解答 - 红颜扑梦的主页&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/03/24/git/&title=Git疑难解答 - 红颜扑梦的主页&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/03/24/git/&title=Git疑难解答 - 红颜扑梦的主页&summary="
+          
+          >
+          
+            <img src="/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2022/03/22/cainiao/'>
+          <p class='title'><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>一级标题二级标题三级标题四级标题五级标题六级标题Markdown 段落文字换行需要在上一行末尾添加两个空格
 也可以或者一个空行
 Markdown 列表
 第一项
@@ -2581,110 +2707,36 @@ Markdown 列表
 
 
 第一项
-第二项
-第三项
-
-
-第一项
-第二项
-第三项有序列表使用
-
-
-第一项
-第二项
-第三项列表嵌套描述：列表嵌套只需在子列表中的选项前面添加四个空格即可
-第一项（回车）
-（空格）第一项嵌套的第一个元素
-（空格）第一...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-03-22T12:58:32+08:00">2022-03-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/03/22/cainiao/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+第二项...</p>
+        </a>
       
     </div>
   
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/22/hello-world/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="红颜扑梦的主页">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="红颜扑梦的主页">
-    <meta itemprop="description" content="">
-  </span>
   
+
   
-  
+  <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2022/03/24/git/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/03/22/hello-world/"  itemprop="url">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-03-22T11:53:20+08:00">2022-03-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/03/22/hello-world/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
+    <div id="layoutHelper-comments"></div>
 
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
+  </article>
   
 
 
-	
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2692,126 +2744,34 @@ Qu...
     
     
 
-<section class="widget blogger shadow desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/media/org.volantis/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">红颜扑梦的主页</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop pjax">
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%88%86%E7%B1%BB1/" href="/categories/%E5%88%86%E7%B1%BB1/"
-            active-action="action-categoriesE58886E7B1BB1"
-            ><div class='name'>分类1</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E8%87%B3%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">上传至服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">部署到服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E8%BF%9E%E6%8E%A5%E4%B8%8AGithub"><span class="toc-text">验证是否连接上Github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90Git%E3%80%91ssh-connect-to-host-github-com-port-22-Connection-refused%E9%94%99%E8%AF%AF"><span class="toc-text">【Git】ssh: connect to host github.com port 22: Connection refused错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90Git%E3%80%91SSL-certificate-problem-unable-to-get-local-issuer-certificate%E9%94%99%E8%AF%AF"><span class="toc-text">【Git】SSL certificate problem: unable to get local issuer certificate错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90Git%E3%80%91SSL-certificate-problem-unable-to-get-local-issuer-certificate%E9%94%99%E8%AF%AF-1"><span class="toc-text">【Git】SSL certificate problem: unable to get local issuer certificate错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90Git%E3%80%91%E5%A6%82%E4%BD%95%E7%94%A8git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E5%88%B0github%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4"><span class="toc-text">【Git】如何用git上传代码到github详细步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90Git%E3%80%91%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">【Git】连接远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90Git%E3%80%91%E9%93%BE%E6%8E%A5%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">【Git】链接远程仓库</span></a></li></ol>
     </div>
   </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Github/" style="font-size: 14px; color: #999">Github</a>
-    </div>
-  </section>
-
-
-  
 
   
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2840,14 +2800,15 @@ Qu...
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Git疑难解答";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2856,14 +2817,14 @@ Qu...
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -2957,7 +2918,7 @@ Qu...
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1648109837284.js"></script>
+<script src="/js/app.js?time=1648109837248.js"></script>
 
 
 
@@ -3149,7 +3110,7 @@ Qu...
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1648109837284')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1648109837248')</script>
 
 
 
@@ -3162,19 +3123,19 @@ Qu...
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1648109837284")
+        volantis.js("/js/plugins/sites.js?time=1648109837248")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1648109837284")
+        volantis.js("/js/plugins/friends.js?time=1648109837248")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1648109837284")
+        volantis.js("/js/plugins/contributors.js?time=1648109837248")
       }
     
   };
@@ -3299,7 +3260,7 @@ Qu...
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1648109837284");
+    return volantis.js("/js/search/hexo.js?time=1648109837248");
   }
 
   function loadSearchService() {
@@ -3590,7 +3551,7 @@ Qu...
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"红颜扑梦的主页","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Hytianyi","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"红颜扑梦的主页"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/archives/2022/","name":"2022年"}},{"@type":"ListItem","position":4,"item":{"@id":"http://example.com/archives/2022/3/","name":"3月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"红颜扑梦的主页","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"Hytianyi","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"红颜扑梦的主页","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"红颜扑梦的主页","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Hytianyi","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"红颜扑梦的主页"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/分类1/","name":"分类1"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/03/24/git/","name":"Git疑难解答"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Git疑难解答","description":"","datePublished":"2022-03-24T08:15:00.000Z","dateModified":"2022-03-24T08:17:01.522Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/03/24/git/"},"author":{"@type":"Person","name":"Hytianyi","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"红颜扑梦的主页","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/03/24/git/","wordCount":0,"articleSection":"分类1","keywords":"Github","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
