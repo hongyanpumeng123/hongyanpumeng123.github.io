@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        表格制作
+    </title>
+    <meta charset="utf-8">
+    <!--<style>  /*图片查看放大头部*/
+        div.gallery {
+          margin: 0px;
+          border: 0px solid #ccc;
+          float: left;  /*表格放在左侧，无法居中，放弃*/
+          width: auto;
+        }
+        
+        div.gallery:hover {
+          border: 1px solid #777;
+        }   
+    </style>-->
+    <style>
+        .center {
+        margin: auto;                       /*表格边距设置*/
+        background: rgb(255, 255, 255,0.4);   /*表格背景颜色设置,不透明度设置*/
+        width: 70%;                         /*内容宽度设置*/
+      }</style>
+    <style>
+        body {
+            background-image: url("https://img.moegirl.org.cn/common/d/de/Nineback.png");  /*背景图片位置*/
+            background-size: cover;
+            background-repeat: no-repeat;   /*背景图片是否重复*/
+            background-attachment:fixed;    /*背景图片是否随着页面滚动*/
+        }
+
+    </style>
+</head>
+<body>
+    <h1>表格</h1>
+    <div class="gallery"; style="text-align: center;"> <!--表格内容剧中-->
+    <h1>GalGame游戏剧情推荐</h1>
+    <table class="center" border="1">   <!--此处不推荐使用align="center"来解决表格居中-->
+    <tr>
+        <th>中文名称</th><th>其他名称</th><th>发售时间</th><th>分级</th><th>获取渠道</th><th>图片</th>
+    </tr>
+    <tr>
+        <td>星空列车与白的旅行</td><td>星空鉄道とシロの旅</td><td>2021-05-14</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href=""></a><img src="" height="100" title="" alt=""></a></td>
+    </tr>
+    <tr>
+        <td>糖调!</td><td>しゅがてん! </td><td>2017-02-24</td><td>18+</td><td>网络</td><td><a target="_blank" href=""></a><img src="" height="100" title="" alt=""></a></td>
+    </tr>
+    <tr>
+        <td>星光咖啡馆与死神之蝶</td><td>喫茶ステラと死神の蝶</td><td>2022-03-25</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href=""></a><img src="" height="100" title="" alt=""></a></td>
+    </tr>
+    <tr>
+        <td>巧克甜恋</td><td>あまいろショコラータ</td><td>2020-01-31</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href=""></a><img src="" height="100" title="" alt=""></a></td>
+    </tr>
+    <tr>
+        <th colspan="6">9-nine系列</th>
+    </tr>
+    <tr>
+        <td>9-nine-九次九日九重色</td><td>9-nine-ここのつここのかここのいろ</td><td>2019-02-01</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href="https://img.moegirl.org.cn/common/d/d8/9-nine-Ep.1_sale.jpg"><img src="https://img.moegirl.org.cn/common/d/d8/9-nine-Ep.1_sale.jpg" height="100" title="九次九日九重色发售贺图" alt="九次九日九重色发售贺图"></a></td>
+    </tr>
+    <tr>
+        <td>9-nine-天色天歌天籁音</td><td>9-nine-そらいろそらうたそらのおと</td><td>2019-08-17</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href="https://img.moegirl.org.cn/common/a/a7/9-nine-Ep.2_sale.jpg"><img src="https://img.moegirl.org.cn/common/a/a7/9-nine-Ep.2_sale.jpg" height="100" title="天色天歌天籁音发售贺图" alt="天色天歌天籁音发售贺图"></a></td>
+    </tr>
+    <tr>
+        <td>9-nine-春色春恋春熙风</td><td>9-nine-はるいろはるこいはるのかぜ</td><td>2020-09-01</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href="https://img.moegirl.org.cn/common/7/78/9-nine-Ep.3_sale.jpg"><img src="https://img.moegirl.org.cn/common/7/78/9-nine-Ep.3_sale.jpg" height="100" title="春色春恋春熙风发售贺图" alt="春色春恋春熙风发售贺图"></a></td>
+    </tr>
+    <tr>
+        <td>9-nine-雪色雪花雪之痕</td><td>9-nine-ゆきいろゆきはなゆきのあと</td><td>2021-03-20</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href="https://img.moegirl.org.cn/common/c/ca/9-nine-Ep.4_sale.jpg"><img src="https://img.moegirl.org.cn/common/c/ca/9-nine-Ep.4_sale.jpg" height="100" title="雪色雪花雪之痕发售贺图" alt="雪色雪花雪之痕发售贺图"></a></td>
+    </tr>
+    <tr>
+        <td>9-nine-新章</td><td>(9-nine-New Episode)</td><td></td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href="https://img.moegirl.org.cn/common/d/d8/9-nine-Ep.1_sale.jpg"><img src="" height="100" title="9-nine-新章" alt="9-nine-新章"></a></td>
+    </tr>
+    <tr>
+        <td>9-nine-</td><td>9-nine-四部和新章的合辑版</td><td>2021-04-23</td><td>全年龄</td><td>STEAM</td><td></td>
+    </tr>
+    </table>
+</div>
+<br>1.图片来源于<b><a href="https://zh.moegirl.org.cn/" target="_blank" title="你知道的太多了">萌娘百科</a></b>
+<br>2.发售时间优先为STEAM,否则为发行方
+</body>
+</html>
