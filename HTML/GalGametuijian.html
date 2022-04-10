@@ -2,77 +2,162 @@
 <html>
 <head>
     <title>
-        表格制作
+        GalGame游戏剧情推荐
     </title>
     <meta charset="utf-8">
-    <!--<style>  /*图片查看放大头部*/
-        div.gallery {
-          margin: 0px;
-          border: 0px solid #ccc;
-          float: left;  /*表格放在左侧，无法居中，放弃*/
-          width: auto;
-        }
-        
-        div.gallery:hover {
-          border: 1px solid #777;
-        }   
-    </style>-->
-    <style>
-        .center {
-        margin: auto;                       /*表格边距设置*/
-        background: rgb(255, 255, 255,0.4);   /*表格背景颜色设置,不透明度设置*/
-        width: 70%;                         /*内容宽度设置*/
-      }</style>
-    <style>
-        body {
-            background-image: url("/image/picture/Nineback.png");  /*背景图片位置*/
-            background-size: cover;
-            background-repeat: no-repeat;   /*背景图片是否重复*/
-            background-attachment:fixed;    /*背景图片是否随着页面滚动*/
-        }
-
-    </style>
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
 </head>
 <body>
+<!--图片点击放大部件start-->
+<style>
+    .over {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .tempContainer {
+        position: fixed;
+        width: 100%;
+        margin-right: 0px;
+        margin-left: 0px;
+        text-align: center;
+        z-index: 101;
+    }
+    .center {
+    margin: auto;                       /*表格边距设置*/
+    background: rgb(255, 255, 255,0.4);   /*表格背景颜色设置,不透明度设置*/
+    width: 70%;                         /*内容宽度设置*/
+    }
+    body {
+        background-image: url("/image/picture/Nineback.png");  /*背景图片位置*/
+        background-size: cover;
+        background-repeat: no-repeat;   /*背景图片是否重复*/
+        background-attachment:fixed;    /*背景图片是否随着页面滚动*/
+    }
+</style>
+<div>
+    <div class="over"></div><!--背景层-->
+    <div class="logoImg amplifyImg"><!--注意：此处的amlifyImg不可少-->
+        <img src=""><!-- 此处是引入图片的路径 -->
+    </div>
+    <script>
+        $(document).ready(function () {
+            var imgsObj = $('.amplifyImg img');//需要放大的图像
+            if (imgsObj) {
+                $.each(imgsObj, function () {
+                    $(this).click(function () {
+                        var currImg = $(this);
+                        coverLayer(1);
+                        var tempContainer = $('<div class=tempContainer></div>');//图片容器
+                        with (tempContainer) {//width方法等同于$(this)
+                            appendTo("body");
+                            var windowWidth = $(window).width();
+                            var windowHeight = $(window).height();
+                            //获取图片原始宽度、高度
+                            var orignImg = new Image();
+                            orignImg.src = currImg.attr("src");
+                            var currImgWidth = orignImg.width;
+                            var currImgHeight = orignImg.height;
+                            if (currImgWidth < windowWidth) {//为了让图片不失真，当图片宽度较小的时候，保留原图
+                                if (currImgHeight < windowHeight) {
+                                    var topHeight = (windowHeight - currImgHeight) / 2;
+                                    if (topHeight > 35) {/*此处为了使图片高度上居中显示在整个手机屏幕中：因为在android,ios的微信中会有一个title导航，35为title导航的高度*/
+                                        topHeight = topHeight - 35;
+                                        css('top', topHeight);
+                                    } else {
+                                        css('top', 0);
+                                    }
+                                    html('<img border=0 src=' + currImg.attr('src') + '>');
+                                } else {
+                                    css('top', 0);
+                                    html('<img border=0 src=' + currImg.attr('src') + ' height=' + windowHeight + '>');
+                                }
+                            } else {
+                                var currImgChangeHeight = (currImgHeight * windowWidth) / currImgWidth;
+                                if (currImgChangeHeight < windowHeight) {
+                                    var topHeight = (windowHeight - currImgChangeHeight) / 2;
+                                    if (topHeight > 35) {
+                                        topHeight = topHeight - 35;
+                                        css('top', topHeight);
+                                    } else {
+                                        css('top', 0);
+                                    }
+                                    html('<img border=0 src=' + currImg.attr('src') + ' width=' + windowWidth + ';>');
+                                } else {
+                                    css('top', 0);
+                                    html('<img border=0 src=' + currImg.attr('src') + ' width=' + windowWidth + '; height=' + windowHeight + '>');
+                                }
+                            }
+                        }
+                        tempContainer.click(function () {
+                            $(this).remove();
+                            coverLayer(0);
+                        });
+                    });
+                });
+            } else {
+                return false;
+            }
+
+            //使用禁用蒙层效果
+            function coverLayer(tag) {
+                with ($('.over')) {
+                    if (tag == 1) {
+                        css('height', $(document).height());
+                        css('display', 'block');
+                        css('opacity', 1);
+                        css("background-color", "#FFFFFF");
+                        css("background-color", "rgba(0,0,0,0.7)");  //蒙层透明度
+                    } else {
+                        css('display', 'none');
+                    }
+                }
+            }
+        });
+    </script>
+</div>
+<!--图片点击放大部件end-->
     <h1>表格</h1>
     <div class="gallery"; style="text-align: center;"> <!--表格内容剧中-->
-    <h1>GalGame游戏剧情推荐</h1>
+        <h1>GalGame游戏剧情推荐</h1>
     <table class="center" border="1">   <!--此处不推荐使用align="center"来解决表格居中-->
     <tr>
         <th>中文名称</th><th>其他名称</th><th>发售时间(中文)</th><th>分级</th><th>获取渠道</th><th>图片</th>
     </tr>
     <tr>
-        <td>星空列车与白的旅行</td><td>星空鉄道とシロの旅</td><td>2021-05-14</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href=""></a><img src="" height="100" title="" alt=""></a></td>
+        <td>星空列车与白的旅行</td><td>星空鉄道とシロの旅</td><td>2021-05-14</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"></div><img src="" height="100" title="" alt=""></td>
     </tr>
     <tr>
-        <td>糖调!</td><td>しゅがてん! </td><td>2017-02-24</td><td>18+</td><td>网络</td><td><a target="_blank" href=""></a><img src="" height="100" title="" alt=""></a></td>
+        <td>糖调!</td><td>しゅがてん! </td><td>2017-02-24</td><td>18+</td><td>网络</td><td><div class="logoImg amplifyImg"></div><img src="" height="100" title="" alt=""></td>
     </tr>
     <tr>
-        <td>星光咖啡馆与死神之蝶</td><td>喫茶ステラと死神の蝶</td><td>2022-03-25</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href=""></a><img src="" height="100" title="" alt=""></a></td>
+        <td>星光咖啡馆与死神之蝶</td><td>喫茶ステラと死神の蝶</td><td>2022-03-25</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"></div><img src="" height="100" title="" alt=""></td>
     </tr>
     <tr>
-        <td>巧克甜恋</td><td>あまいろショコラータ</td><td>2020-01-31</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href=""></a><img src="" height="100" title="" alt=""></a></td>
+        <td>巧克甜恋</td><td>あまいろショコラータ</td><td>2020-01-31</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"></div><img src="" height="100" title="" alt=""></td>
     </tr>
     <tr>
-        <td>千恋＊万花</td><td>千恋＊万花</td><td>2020-02-14</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href="https://img.moegirl.org.cn/common/thumb/7/7c/Qlwhbkg.jpg/1680px-Qlwhbkg.jpg"><img src="/image/picture/1680px-Qlwhbkg.jpg" height="100" title="千恋＊万花" alt="千恋＊万花"></a></td>
+        <td>千恋＊万花</td><td>千恋＊万花</td><td>2020-02-14</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/1680px-Qlwhbkg.jpg" height="100" title="千恋＊万花" alt="千恋＊万花"></div></td>
+    </tr>
+    <th colspan="6">9-nine系列</th>
     </tr>
     <tr>
-        <th colspan="6">9-nine系列</th>
+        <td>9-nine-九次九日九重色</td><td>9-nine-ここのつここのかここのいろ</td><td>2019-02-01</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/9-nine-Ep.1_sale.jpg" height="100" title="九次九日九重色发售贺图" alt="九次九日九重色发售贺图"></div></td>
     </tr>
     <tr>
-        <td>9-nine-九次九日九重色</td><td>9-nine-ここのつここのかここのいろ</td><td>2019-02-01</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href="https://img.moegirl.org.cn/common/d/d8/9-nine-Ep.1_sale.jpg"><img src="/image/picture/9-nine-Ep.1_sale.jpg" height="100" title="九次九日九重色发售贺图" alt="九次九日九重色发售贺图"></a></td>
+        <td>9-nine-天色天歌天籁音</td><td>9-nine-そらいろそらうたそらのおと</td><td>2019-08-17</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/9-nine-Ep.2_sale.jpg" height="100" title="天色天歌天籁音发售贺图" alt="天色天歌天籁音发售贺图"></div></td>
     </tr>
     <tr>
-        <td>9-nine-天色天歌天籁音</td><td>9-nine-そらいろそらうたそらのおと</td><td>2019-08-17</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href="https://img.moegirl.org.cn/common/a/a7/9-nine-Ep.2_sale.jpg"><img src="/image/picture/9-nine-Ep.2_sale.jpg" height="100" title="天色天歌天籁音发售贺图" alt="天色天歌天籁音发售贺图"></a></td>
+        <td>9-nine-春色春恋春熙风</td><td>9-nine-はるいろはるこいはるのかぜ</td><td>2020-09-01</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/9-nine-Ep.3_sale.jpg" height="100" title="春色春恋春熙风发售贺图" alt="春色春恋春熙风发售贺图"></div></td>
     </tr>
     <tr>
-        <td>9-nine-春色春恋春熙风</td><td>9-nine-はるいろはるこいはるのかぜ</td><td>2020-09-01</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href="https://img.moegirl.org.cn/common/7/78/9-nine-Ep.3_sale.jpg"><img src="/image/picture/9-nine-Ep.3_sale.jpg" height="100" title="春色春恋春熙风发售贺图" alt="春色春恋春熙风发售贺图"></a></td>
+        <td>9-nine-雪色雪花雪之痕</td><td>9-nine-ゆきいろゆきはなゆきのあと</td><td>2021-03-20</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/9-nine-Ep.4_sale.jpg" height="100" title="雪色雪花雪之痕发售贺图" alt="雪色雪花雪之痕发售贺图"></div></td>
     </tr>
     <tr>
-        <td>9-nine-雪色雪花雪之痕</td><td>9-nine-ゆきいろゆきはなゆきのあと</td><td>2021-03-20</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href="https://img.moegirl.org.cn/common/c/ca/9-nine-Ep.4_sale.jpg"><img src="/image/picture/9-nine-Ep.4_sale.jpg" height="100" title="雪色雪花雪之痕发售贺图" alt="雪色雪花雪之痕发售贺图"></a></td>
-    </tr>
-    <tr>
-        <td>9-nine-新章</td><td>(9-nine-New Episode)</td><td>2022-03-19</td><td>全年龄</td><td>STEAM</td><td><a target="_blank" href="https://img.moegirl.org.cn/common/d/d8/9-nine-Ep.1_sale.jpg"><img src="" height="100" title="9-nine-新章" alt="9-nine-新章"></a></td>
+        <td>9-nine-新章</td><td>(9-nine-New Episode)</td><td>2022-03-19</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"></div><img src="" height="100" title="9-nine-新章" alt="9-nine-新章"></td>
     </tr>
     <tr>
         <td>9-nine-</td><td>9-nine-四部和新章的合辑版</td><td>2021-04-23</td><td>全年龄</td><td>STEAM</td><td></td>
