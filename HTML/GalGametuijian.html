@@ -7,6 +7,17 @@
     <meta charset="utf-8">
     <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     <script type="text/javascript" src="/js/jquery-1.8.0.min.js"></script>
+    <style>
+        
+    /* .links {
+        color: aqua;
+    } */
+
+    a.links:link {color: #ff0000; text-decoration: none;}
+    a.links:visited {color: #fd088e; text-decoration: none;}
+    a.links:hover {color: rgb(168,214,245); text-decoration: none;}
+
+    </style>
 </head>
 <body>
 <!--图片点击放大部件start-->
@@ -27,14 +38,16 @@
         text-align: center;
         z-index: 101;
     }
+
     .center {
     margin: auto;                       /*表格边距设置*/
     background: rgb(255, 255, 255,0.4);   /*表格背景颜色设置,不透明度设置*/
     width: 70%;                         /*内容宽度设置*/
     }
+
     body {
         background-image: url("/image/picture/Nineback.png");  /*背景图片位置*/
-        background-size: cover;
+        background-size: cover;         /*保持原有比例覆盖背景区*/
         background-repeat: no-repeat;   /*背景图片是否重复*/
         background-attachment:fixed;    /*背景图片是否随着页面滚动*/
     }
@@ -126,24 +139,30 @@
         <h1>GalGame游戏剧情推荐</h1>
     <table class="center" border="1">   <!--此处不推荐使用align="center"来解决表格居中-->
     <tr>
-        <th>中文名称</th><th>其他名称</th><th>发售时间(中文)</th><th>分级</th><th>获取渠道</th><th>图片</th>
+        <th>中文名称</th><th>其他名称</th><th>发售时间(中文)</th><th>分级</th><th>获取渠道</th><th>图片(点击图片可放大)</th>
     </tr>
     <tr>
-        <td>星空列车与白的旅行</td><td>星空鉄道とシロの旅</td><td>2021-05-14</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"></div><img src="" height="100" title="" alt=""></td>
+        <td>星空列车与白的旅行</td><td>星空鉄道とシロの旅</td><td>2021-05-14</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/xingkong.jpg" height="100" title="星空列车与白的旅行" alt="星空列车与白的旅行"></div></td>
     </tr>
     <tr>
-        <td>糖调!</td><td>しゅがてん! </td><td>2017-02-24</td><td>18+</td><td>网络</td><td><div class="logoImg amplifyImg"></div><img src="" height="100" title="" alt=""></td>
+        <td>糖调! -sugarfull tempering-</td><td>しゅがてん! -sugarfull tempering-</td><td>2017-02-24</td><td>18+</td><td>官方网站</td><td><div class="logoImg amplifyImg"><img src="/image/picture/Sugarful_cover.jpg" height="100" title="糖调!" alt="糖调!"></div></td>
     </tr>
     <tr>
-        <td>星光咖啡馆与死神之蝶</td><td>喫茶ステラと死神の蝶</td><td>2022-03-25</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"></div><img src="" height="100" title="" alt=""></td>
+        <td>星光咖啡馆与死神之蝶</td><td>喫茶ステラと死神の蝶</td><td>2022-03-25</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/stellabg.jpg" height="100" title="星光咖啡馆与死神之蝶" alt="星光咖啡馆与死神之蝶"></div></td>
     </tr>
     <tr>
-        <td>巧克甜恋</td><td>あまいろショコラータ</td><td>2020-01-31</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"></div><img src="" height="100" title="" alt=""></td>
+        <td>巧克甜恋</td><td>あまいろショコラータ</td><td>2020-01-31</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/Amairo-Chocolate1.webp" height="100" title="巧克甜恋" alt="巧克甜恋"></div></td>
     </tr>
     <tr>
         <td>千恋＊万花</td><td>千恋＊万花</td><td>2020-02-14</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/1680px-Qlwhbkg.jpg" height="100" title="千恋＊万花" alt="千恋＊万花"></div></td>
     </tr>
-    <th colspan="6">9-nine系列</th>
+    <tr>
+        <td>密命王牌</td><td>リドルジョーカー<br>RIDDLE JOKER</td><td>2020-12-18</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/Riddle_Joker1.jpg" height="100" title="RIDDLE JOKER" alt="RIDDLE JOKER"></div></td>
+    </tr>
+    <tr>
+        <td>爱上火车-Last Run!!</td><td>まいてつ-Last Run!!</td><td>2018-09-21</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/Last_Run.jpg" height="100" title="爱上火车-Last Run!!" alt="爱上火车-Last Run!!"></div></td>
+    </tr>
+    <th colspan="6"><a class="links" href="https://9-nine-project.com/" target="_blank" title="点击跳转">9-nine系列</a></th>
     </tr>
     <tr>
         <td>9-nine-九次九日九重色</td><td>9-nine-ここのつここのかここのいろ</td><td>2019-02-01</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/9-nine-Ep.1_sale.jpg" height="100" title="九次九日九重色发售贺图" alt="九次九日九重色发售贺图"></div></td>
@@ -158,14 +177,17 @@
         <td>9-nine-雪色雪花雪之痕</td><td>9-nine-ゆきいろゆきはなゆきのあと</td><td>2021-03-20</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"><img src="/image/picture/9-nine-Ep.4_sale.jpg" height="100" title="雪色雪花雪之痕发售贺图" alt="雪色雪花雪之痕发售贺图"></div></td>
     </tr>
     <tr>
-        <td>9-nine-新章</td><td>(9-nine-New Episode)</td><td>2022-03-19</td><td>全年龄</td><td>STEAM</td><td><div class="logoImg amplifyImg"></div><img src="" height="100" title="9-nine-新章" alt="9-nine-新章"></td>
+        <td>9-nine-新章</td><td>(9-nine-New Episode)</td><td>2022-03-19</td><td>全年龄</td><td>网站官网</td><td><div class="logoImg amplifyImg"><img src="https://9-nine-project.com/wp/wp-content/themes/nine-project/assets/images/pc/game/img_nav_05.png" height="100" title="9-nine-新章" alt="9-nine-新章"></div></td>
     </tr>
     <tr>
-        <td>9-nine-</td><td>9-nine-四部和新章的合辑版</td><td>2021-04-23</td><td>全年龄</td><td>STEAM</td><td></td>
+        <td>9-nine-</td><td>9-nine-四部和新章的合辑版</td><td>2021-04-23</td><td>全年龄</td><td>网站官网</td><td><div class="logoImg amplifyImg"><img src="https://9-nine-project.com/wp/wp-content/themes/nine-project/assets/images/common/common/img_keyvisual.jpg" height="100" title="9-nine-四部和新章的合辑版" alt="9-nine-四部和新章的合辑版"></div></td>
+    </tr>
+    <tr>
+        <td>爱上火车-Last Run!!</td><td>まいてつ-Last Run!!</td><td>2018-09-21</td><td>全年龄</td><td>STEAM</td><td><a href="/image/picture/Last_Run.jpg" target="_blank"><img src="/image/picture/Last_Run.jpg" height="100"title="爱上火车-Last Run!!" alt="爱上火车-Last Run!!"></a></td>
     </tr>
     </table>
 </div>
-<br>1.图片来源于<b><a href="https://zh.moegirl.org.cn/" target="_blank" title="你知道的太多了">萌娘百科</a></b>
+<br>1.图片部分来源于<b><a href="https://zh.moegirl.org.cn/" target="_blank" title="你知道的太多了">萌娘百科</a></b>,图片版权归<b>游戏官方</b>所有,如侵权将进行相关删除！
 <br>2.发售时间(中文)优先为STEAM,否则为日文发售时间
 <br>3.图片点击如果出现错误,请复制图片地址访问,此网站中转有时会403...
 <br>4.好好学习,天天向上!搭建个网站自学真累!
