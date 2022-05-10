@@ -20,120 +20,6 @@
     </style>
 </head>
 <body>
-<!--图片点击放大部件start-->
-<style>
-    .over {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        z-index: 100;
-    }
-
-    .tempContainer {
-        position: fixed;
-        width: 100%;
-        margin-right: 0px;
-        margin-left: 0px;
-        text-align: center;
-        z-index: 101;
-    }
-
-    .center {
-    margin: auto;                       /*表格边距设置*/
-    background: rgb(255, 255, 255,0.4);   /*表格背景颜色设置,不透明度设置*/
-    width: 70%;                         /*内容宽度设置*/
-    }
-
-    body {
-        background-image: url("/image/picture/Nineback.png");  /*背景图片位置*/
-        background-size: cover;         /*保持原有比例覆盖背景区*/
-        background-repeat: no-repeat;   /*背景图片是否重复*/
-        background-attachment:fixed;    /*背景图片是否随着页面滚动*/
-    }
-</style>
-<div>
-    <div class="over"></div><!--背景层-->
-    <div class="logoImg amplifyImg"><!--注意：此处的amlifyImg不可少-->
-        <img src=""><!-- 此处是引入图片的路径 -->
-    </div>
-    <script>
-        $(document).ready(function () {
-            var imgsObj = $('.amplifyImg img');//需要放大的图像
-            if (imgsObj) {
-                $.each(imgsObj, function () {
-                    $(this).click(function () {
-                        var currImg = $(this);
-                        coverLayer(1);
-                        var tempContainer = $('<div class=tempContainer></div>');//图片容器
-                        with (tempContainer) {//width方法等同于$(this)
-                            appendTo("body");
-                            var windowWidth = $(window).width();
-                            var windowHeight = $(window).height();
-                            //获取图片原始宽度、高度
-                            var orignImg = new Image();
-                            orignImg.src = currImg.attr("src");
-                            var currImgWidth = orignImg.width;
-                            var currImgHeight = orignImg.height;
-                            if (currImgWidth < windowWidth) {//为了让图片不失真，当图片宽度较小的时候，保留原图
-                                if (currImgHeight < windowHeight) {
-                                    var topHeight = (windowHeight - currImgHeight) / 2;
-                                    if (topHeight > 35) {/*此处为了使图片高度上居中显示在整个手机屏幕中：因为在android,ios的微信中会有一个title导航，35为title导航的高度*/
-                                        topHeight = topHeight - 35;
-                                        css('top', topHeight);
-                                    } else {
-                                        css('top', 0);
-                                    }
-                                    html('<img border=0 src=' + currImg.attr('src') + '>');
-                                } else {
-                                    css('top', 0);
-                                    html('<img border=0 src=' + currImg.attr('src') + ' height=' + windowHeight + '>');
-                                }
-                            } else {
-                                var currImgChangeHeight = (currImgHeight * windowWidth) / currImgWidth;
-                                if (currImgChangeHeight < windowHeight) {
-                                    var topHeight = (windowHeight - currImgChangeHeight) / 2;
-                                    if (topHeight > 35) {
-                                        topHeight = topHeight - 35;
-                                        css('top', topHeight);
-                                    } else {
-                                        css('top', 0);
-                                    }
-                                    html('<img border=0 src=' + currImg.attr('src') + ' width=' + windowWidth + ';>');
-                                } else {
-                                    css('top', 0);
-                                    html('<img border=0 src=' + currImg.attr('src') + ' width=' + windowWidth + '; height=' + windowHeight + '>');
-                                }
-                            }
-                        }
-                        tempContainer.click(function () {
-                            $(this).remove();
-                            coverLayer(0);
-                        });
-                    });
-                });
-            } else {
-                return false;
-            }
-
-            //使用禁用蒙层效果
-            function coverLayer(tag) {
-                with ($('.over')) {
-                    if (tag == 1) {
-                        css('height', $(document).height());
-                        css('display', 'block');
-                        css('opacity', 1);
-                        css("background-color", "#FFFFFF");
-                        css("background-color", "rgba(0,0,0,0.7)");  //蒙层透明度
-                    } else {
-                        css('display', 'none');
-                    }
-                }
-            }
-        });
-    </script>
-</div>
-<!--图片点击放大部件end-->
     <h1>表格</h1>
     <div class="gallery"; style="text-align: center;"> <!--表格内容剧中-->
         <h1>GalGame游戏剧情推荐</h1>
@@ -191,5 +77,144 @@
 <br>2.发售时间(中文)优先为STEAM,否则为日文发售时间
 <br>3.图片点击如果出现错误,请复制图片地址访问,此网站中转有时会403...
 <br>4.好好学习,天天向上!搭建个网站自学真累!
+<!-- script专用start -->
+<div>
+    <!--图片点击放大部件start-->
+    <style>
+        .over {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .tempContainer {
+            position: fixed;
+            width: 100%;
+            margin-right: 0px;
+            margin-left: 0px;
+            text-align: center;
+            z-index: 101;
+        }
+
+        .center {
+        margin: auto;                       /*表格边距设置*/
+        background: rgb(255, 255, 255,0.4);   /*表格背景颜色设置,不透明度设置*/
+        width: 70%;                         /*内容宽度设置*/
+        }
+
+        body {
+            background-image: url("/image/picture/Nineback.png");  /*背景图片位置*/
+            background-size: cover;         /*保持原有比例覆盖背景区*/
+            background-repeat: no-repeat;   /*背景图片是否重复*/
+            background-attachment:fixed;    /*背景图片是否随着页面滚动*/
+        }
+    </style>
+    <div>
+        <div class="over"></div><!--背景层-->
+        <div class="logoImg amplifyImg"><!--注意：此处的amlifyImg不可少-->
+            <img src=""><!-- 此处是引入图片的路径 -->
+        </div>
+        <script>
+            $(document).ready(function () {
+                var imgsObj = $('.amplifyImg img');//需要放大的图像
+                if (imgsObj) {
+                    $.each(imgsObj, function () {
+                        $(this).click(function () {
+                            var currImg = $(this);
+                            coverLayer(1);
+                            var tempContainer = $('<div class=tempContainer></div>');//图片容器
+                            with (tempContainer) {//width方法等同于$(this)
+                                appendTo("body");
+                                var windowWidth = $(window).width();
+                                var windowHeight = $(window).height();
+                                //获取图片原始宽度、高度
+                                var orignImg = new Image();
+                                orignImg.src = currImg.attr("src");
+                                var currImgWidth = orignImg.width;
+                                var currImgHeight = orignImg.height;
+                                if (currImgWidth < windowWidth) {//为了让图片不失真，当图片宽度较小的时候，保留原图
+                                    if (currImgHeight < windowHeight) {
+                                        var topHeight = (windowHeight - currImgHeight) / 2;
+                                        if (topHeight > 35) {/*此处为了使图片高度上居中显示在整个手机屏幕中：因为在android,ios的微信中会有一个title导航，35为title导航的高度*/
+                                            topHeight = topHeight - 35;
+                                            css('top', topHeight);
+                                        } else {
+                                            css('top', 0);
+                                        }
+                                        html('<img border=0 src=' + currImg.attr('src') + '>');
+                                    } else {
+                                        css('top', 0);
+                                        html('<img border=0 src=' + currImg.attr('src') + ' height=' + windowHeight + '>');
+                                    }
+                                } else {
+                                    var currImgChangeHeight = (currImgHeight * windowWidth) / currImgWidth;
+                                    if (currImgChangeHeight < windowHeight) {
+                                        var topHeight = (windowHeight - currImgChangeHeight) / 2;
+                                        if (topHeight > 35) {
+                                            topHeight = topHeight - 35;
+                                            css('top', topHeight);
+                                        } else {
+                                            css('top', 0);
+                                        }
+                                        html('<img border=0 src=' + currImg.attr('src') + ' width=' + windowWidth + ';>');
+                                    } else {
+                                        css('top', 0);
+                                        html('<img border=0 src=' + currImg.attr('src') + ' width=' + windowWidth + '; height=' + windowHeight + '>');
+                                    }
+                                }
+                            }
+                            tempContainer.click(function () {
+                                $(this).remove();
+                                coverLayer(0);
+                            });
+                        });
+                    });
+                } else {
+                    return false;
+                }
+
+                //使用禁用蒙层效果
+                function coverLayer(tag) {
+                    with ($('.over')) {
+                        if (tag == 1) {
+                            css('height', $(document).height());
+                            css('display', 'block');
+                            css('opacity', 1);
+                            css("background-color", "#FFFFFF");
+                            css("background-color", "rgba(0,0,0,0.7)");  //蒙层透明度
+                        } else {
+                            css('display', 'none');
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+    <!--图片点击放大部件end-->
+    <!-- Aplayer音乐部件start -->
+    <div>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+        <meting-js
+        fixed="true"
+        server="tencent"
+        type="playlist"
+        id="8469660894"
+        order="random"
+        preload="none">
+        </meting-js>
+        <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+        <!-- 使用说明：1.fixed   true   APlayer开启吸底模式，即现在左下角这个样子。      false，true
+                2.server    netease	    即播放源平台，这里我选择的是网易云音乐。	netease, tencent, kugou, xiami, baidu
+                3.type	    playlist	音乐类型，这里我选择的是歌单。	            song, playlist, album, search, artist
+                4.id	    5225821464	id，由于我选择是歌单，这里便是歌单id
+                5.order	    random	    循环模式，这里选择的是随机循环	            'list', 'random'
+                6.preload	none	    预加载，我选择的是不预加载	                'none', 'metadata', 'auto' -->
+    </div>
+    <!-- Aplayer音乐部件end -->
+</div>
+<!-- script专用end -->
 </body>
 </html>
