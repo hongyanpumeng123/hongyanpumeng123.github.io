@@ -1,0 +1,12 @@
+#timer {
+    font-size: 100px;
+    font-weight: bold;
+    z-index:2;
+    text-align: center;
+    height: 150px;
+    background: -webkit-linear-gradient(left,#4facfe,#00f2fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 80px 80px
+}
