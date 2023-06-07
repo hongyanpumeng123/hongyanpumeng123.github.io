@@ -1,0 +1,12 @@
+#vcomment textarea, #waline-wrap textarea {
+    /* background-image: url(../img/valineBg.jpg); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: vertical
+}
+#vcomment textarea:focus, #waline-wrap textarea:focus{
+    background-position-y: 200px;
+    transition: all 0.2s ease-in-out 0s;
+}
