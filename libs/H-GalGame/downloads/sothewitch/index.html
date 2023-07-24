@@ -98,7 +98,7 @@
             <div class="title">
                 <h3>安全提示(分流补丁)<small>(2023.07.21)</small></h3>
             </div>
-            <div class="open-url mt-3">
+            <div class="open-url mt-3 ">
                 <p>您即将离开本站并跳转至以下网址，该网页内容与本站无关，请确认是否继续访问？</p>
                 <p>点击下方链接及表示您同意</p>
                 <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="百度网盘">百度网盘</button>
@@ -162,6 +162,26 @@
     </div>
     <script src="../../libs/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- https://getbootstrap.com/docs/5.3/components/modal/#varying-modal-content -->
+    <!-- <script>
+        const exampleModal = document.getElementById('tips')
+        const links = {
+            "百度网盘": "https://pan.baidu.com/",
+            "OneDrive": "https://onedrive.live.com/",
+            "阿里云盘": "https://www.aliyundrive.com/",
+            "Google盘": "https://drive.google.com/"
+        };
+        if (exampleModal) {
+            exampleModal.addEventListener('show.bs.modal', event => {
+                const button = event.relatedTarget
+                const recipient = button.getAttribute('data-bs-whatever')
+                const modalTitle = exampleModal.querySelector('.btn-server')
+                modalTitle.textContent = `我已满18岁，前往${recipient}`
+                modalTitle.onclick = function() {
+                    window.location.href = links[recipient];
+                }
+            })
+        }
+    </script> -->
     <script>
         const exampleModal = document.getElementById('tips')
         const links = {
@@ -180,6 +200,32 @@
                     window.location.href = links[recipient];
                 }
             })
+        }
+    
+        function checkUrlServer(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.responseText === 'true') {
+                        callback(true);
+                    } else {
+                        callback(false);
+                    }
+                }
+            };
+            xhr.open('GET', 'https://hongyanpumeng.pages.dev/libs/H-GalGame/server/Link_detection.php?url=' + encodeURIComponent(url), true);
+            xhr.send();
+        }
+    
+        for (const [name, url] of Object.entries(links)) {
+            checkUrlServer(url, function(isValid) {
+                let button = document.querySelector(`button[data-bs-whatever="${name}"]`);
+                if (isValid) {
+                    button.textContent = name + ' 链接有效';
+                } else {
+                    button.textContent = name + ' 链接无效';
+                }
+            });
         }
     </script>
     <script>
