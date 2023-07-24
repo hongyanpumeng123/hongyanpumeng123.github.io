@@ -70,6 +70,98 @@
       .card-body {padding-right: 10px; padding-left: 10px;}
       /* 介绍超出两行变成省略号 */
       .test-hidden-subtitle-h4 {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; height:3.5em;}
+      /*  */
+    </style>
+    <style>
+      .box {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2)
+      }
+    
+      .box .box-link {
+        display: block;
+        position: relative
+      }
+      
+      .box .label-red {
+          background-color: #dc3545;
+      }
+    
+      .box .box-link .box-img {
+        width: 100%
+      }
+    
+      .box .box-link .box-overlay {
+        background-color: transparent;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0
+      }
+    
+      .box .box-link .box-overlay:hover {
+        background-color: rgba(0, 0, 0, .1)
+      }
+    
+      .box .box-link .box-overlay .shop-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        border-radius: 0 0 .5rem 0;
+        opacity: .9;
+        font-size: 1.4rem;
+        padding: .2rem .6rem
+      }
+    
+      @media screen and (max-width:992px) {
+        .box .box-link .box-overlay .shop-label {
+          font-size: .9rem
+        }
+      }
+    
+      @media screen and (max-width:576px) {
+        .box .box-link .box-overlay .shop-label {
+          font-size: .8rem
+        }
+      }
+    
+      .box .box-link .box-overlay .shop-price {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.4rem;
+        padding: .1rem .5rem;
+        color: #adcd42;
+        background-color: rgba(83, 106, 45, .9);
+        border-radius: 0 0 0 .5rem;
+        opacity: .9
+      }
+    
+      .box .box-link .box-overlay .have-game {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 1rem;
+        padding: .15rem;
+        text-align: center;
+        color: #adcd42;
+        background-color: rgba(83, 106, 45, .9);
+        opacity: .9
+      }
+      .containers {
+          margin-left: 1.2rem!important;
+          margin-right: 1.2rem!important;
+      }
+      @media (min-width:1400px){
+        .containers{max-width:1920px}
+      }
+      /* ,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl */
     </style>
 
     
@@ -81,11 +173,11 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+          <h4 class="text-white">关于</h4>
+          <p class="text-light">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
+          <h4 class="text-white">友情链接</h4>
           <ul class="list-unstyled">
             <li><a href="https://store.hikarifield.co.jp/shops" target="_blank" class="link-warning">HIKARI FIELD STORE官网</a></li>
             <li><a href="https://store.steampowered.com/" target="_blank" class="link-warning">STEAM官网</a></li>
@@ -123,420 +215,453 @@
       </div>
     </div>
   </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/mv-w2560-3.webp" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate">星空列车与白的旅行</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？这场旅行，究竟会在她身上留下些什么呢？这场旅行，究竟会在她身上留下些什么呢？</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar bg-success" style="width: 100%">100%</div>
+  <section class="shops">
+    <div class="album py-6 bg-light">
+      <div class="containers">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/mv-w2560-3.webp" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='./shops/shiratamaco'">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate">星空列车与白的旅行</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？这场旅行，究竟会在她身上留下些什么呢？这场旅行，究竟会在她身上留下些什么呢？</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar bg-success" style="width: 100%">100%</div>
                 </div>
-                <span class="badge text-bg-success">已通关<span class="badge text-bg-secondary">1次</span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='./shops/shiratamaco'">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-success">已通关<span class="badge text-bg-secondary">1次</span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/Sugarful_cover.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate">糖调!</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">北国，小镇，雪飘万里。</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar bg-warning" style="width: 65%">65%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/Sugarful_cover.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='./shops/sugarfull'">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate">糖调!</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">北国，小镇，雪飘万里。</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar bg-warning" style="width: 65%">65%</div>
                 </div>
-                <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='./shops/sugarfull'">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/riddle_joker.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate">RIDDLE JOKER</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 23%">23%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/riddle_joker.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate">RIDDLE JOKER</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 23%">23%</div>
                 </div>
-                <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/stella.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate">星光咖啡馆与死神之蝶</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 43%">43%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/stella.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate">星光咖啡馆与死神之蝶</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 43%">43%</div>
                 </div>
-                <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/Amairo-Chocolate.png" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate">巧克甜恋</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar bg-warning" style="width: 60%">60%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/Amairo-Chocolate.png" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate">巧克甜恋</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar bg-warning" style="width: 60%">60%</div>
                 </div>
-                <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/senren_banka.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate">千恋*万花</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 25%">25%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/senren_banka.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='./shops/senren_banka'">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate">千恋*万花</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 25%">25%</div>
                 </div>
-                <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='./shops/senren_banka'">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/sothewitch.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate">魔女的夜宴</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 25%">25%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/sothewitch.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='./shops/sothewitch'">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate">魔女的夜宴</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 25%">25%</div>
                 </div>
-                <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='./shops/sothewitch'">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/maitetsu_lastrun.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate">爱上火车-Last Run!!-</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 23%">23%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/maitetsu_lastrun.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate">爱上火车-Last Run!!-</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 23%">23%</div>
                 </div>
-                <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/riddle_joker.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate">常轨脱离</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 23%">23%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/riddle_joker.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate">常轨脱离</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">这场旅行，究竟会在她身上留下些什么呢？</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 23%">23%</div>
                 </div>
-                <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/yumahorome.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate" title="真愿朦幻馆~在时间暂停的洋馆里追寻明天的羔羊们~">真愿朦幻馆~在时间暂停的洋馆里追寻明天的羔羊们~</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">只要待在这里，外界----也就是大家原来的世界的时间就会完全静止。</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 23%">23%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/yumahorome.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate" title="真愿朦幻馆~在时间暂停的洋馆里追寻明天的羔羊们~">真愿朦幻馆~在时间暂停的洋馆里追寻明天的羔羊们~</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">只要待在这里，外界----也就是大家原来的世界的时间就会完全静止。</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 23%">23%</div>
                 </div>
-                <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/hananono.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate" title="五色浮影绽放于花之海洋">五色浮影绽放于花之海洋</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">世界充满了多样的"色彩",但是屋内却又一位没有"色彩"的少女,等待着欢饮雀跃踏入新天地的道隆。</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 7%">7%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/hananono.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate" title="五色浮影绽放于花之海洋">五色浮影绽放于花之海洋</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">世界充满了多样的"色彩",但是屋内却又一位没有"色彩"的少女,等待着欢饮雀跃踏入新天地的道隆。</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 7%">7%</div>
                 </div>
-                <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/NEKOPARA_common/Nekopara extra.gif" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Extra">NEKOPARA Extra</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">NEKOPARA Extra是NEKOPARA视觉小说系列的众筹计划NEKOPARA OVA的延伸目标之一。惹人怜爱的两只猫娘，巧克力和香草又回来啦！</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 7%">7%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/NEKOPARA_common/Nekopara extra.gif" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Extra">NEKOPARA Extra</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">NEKOPARA Extra是NEKOPARA视觉小说系列的众筹计划NEKOPARA OVA的延伸目标之一。惹人怜爱的两只猫娘，巧克力和香草又回来啦！</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 7%">7%</div>
                 </div>
-                <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning">攻略中<span class="badge text-bg-secondary"></span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/NEKOPARA_common/NEKOPARA_Vol.0_616x353.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Vol.0">NEKOPARA Vol.0</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">The eldest daughter of the Minaduki household and their 6 catgirls go to wake up their master</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 5%">0%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/NEKOPARA_common/NEKOPARA_Vol.0_616x353.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Vol.0">NEKOPARA Vol.0</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">The eldest daughter of the Minaduki household and their 6 catgirls go to wake up their master</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 5%">0%</div>
                 </div>
-                <span class="badge text-bg-warning1 text-bg-info1 bg-primary-subtle"><span class="badge1 text-bg-secondary1">未开始</span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning1 text-bg-info1 bg-primary-subtle"><span class="badge1 text-bg-secondary1">未开始</span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/NEKOPARA_common/NEKOPARA_Vol.1_616x353.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Vol.1">NEKOPARA Vol.1</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">The eldest daughter of the Minaduki household and their 6 catgirls go to wake up their master</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 5%">0%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/NEKOPARA_common/NEKOPARA_Vol.1_616x353.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Vol.1">NEKOPARA Vol.1</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">The eldest daughter of the Minaduki household and their 6 catgirls go to wake up their master</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 5%">0%</div>
                 </div>
-                <span class="badge text-bg-warning1 text-bg-info1 bg-primary-subtle"><span class="badge1 text-bg-secondary1">未开始</span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning1 text-bg-info1 bg-primary-subtle"><span class="badge1 text-bg-secondary1">未开始</span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/NEKOPARA_common/NEKOPARA_Vol.2_616x353.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Vol.2">NEKOPARA Vol.2</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">The eldest daughter of the Minaduki household and their 6 catgirls go to wake up their master</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 5%">0%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/NEKOPARA_common/NEKOPARA_Vol.2_616x353.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Vol.2">NEKOPARA Vol.2</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">The eldest daughter of the Minaduki household and their 6 catgirls go to wake up their master</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 5%">0%</div>
                 </div>
-                <span class="badge text-bg-warning1 text-bg-info1 bg-primary-subtle"><span class="badge1 text-bg-secondary1">未开始</span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning1 text-bg-info1 bg-primary-subtle"><span class="badge1 text-bg-secondary1">未开始</span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/NEKOPARA_common/NEKOPARA_Vol.3_616x353.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Vol.3">NEKOPARA Vol.3</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">The eldest daughter of the Minaduki household and their 6 catgirls go to wake up their master</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 5%">0%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/NEKOPARA_common/NEKOPARA_Vol.3_616x353.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Vol.3">NEKOPARA Vol.3</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">The eldest daughter of the Minaduki household and their 6 catgirls go to wake up their master</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 5%">0%</div>
                 </div>
-                <span class="badge text-bg-warning1 text-bg-info1 bg-primary-subtle"><span class="badge1 text-bg-secondary1">未开始</span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning1 text-bg-info1 bg-primary-subtle"><span class="badge1 text-bg-secondary1">未开始</span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="ratio ratio-16x9">
-              <img src="./images/NEKOPARA_common/NEKOPARA_Vol.4_616x353.jpg" class="figure-img img-fluid rounded" alt="...">
-            </div>
-            <div class="card-body">
-                <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Vol.4">NEKOPARA Vol.4</div>
-                <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">The eldest daughter of the Minaduki household and their 6 catgirls go to wake up their master</div>
-              <span class="">游玩进度</span>
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 5%">0%</div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="ratio ratio-16x9">
+                <img src="./images/NEKOPARA_common/NEKOPARA_Vol.4_616x353.jpg" class="figure-img img-fluid rounded" alt="...">
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Vol.4">NEKOPARA Vol.4</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">The eldest daughter of the Minaduki household and their 6 catgirls go to wake up their master</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 5%">0%</div>
                 </div>
-                <span class="badge text-bg-warning1 text-bg-info1 bg-primary-subtle"><span class="badge1 text-bg-secondary1">未开始</span></span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning1 text-bg-info1 bg-primary-subtle"><span class="badge1 text-bg-secondary1">未开始</span></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">敬请期待</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="box"><a href="#" class="box-link">
+                <img src="./images/amairo_chocolate_2_616x353.jpg" class="box-img">
+                  <div class="box-overlay">
+                    <div class="shop-label label-red">
+                      促销中
+                    </div>
+                    <div class="shop-price">40元</div>
+                    <div class="have-game">
+                      该游戏已经在您的游戏库中。
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card-body">
+                  <div class="mdui-card-primary-title text-truncate" title="NEKOPARA Vol.4">巧克甜恋2</div>
+                  <div class="mdui-card-primary-subtitle test-hidden-subtitle-h4">全新的邂逅，全新的竞争对手，以及全新的爱情！ 巧克甜恋系列第二作终于登陆Steam平台，除了前作两位女主以外，更是增加了全新的可爱妹子与可推角色！</div>
+                <span class="">游玩进度</span>
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar" style="width: 5%">0%</div>
                 </div>
-                <small class="text-muted">9 mins</small>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">阅读更多</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <span class="badge text-bg-warning1 text-bg-info1 bg-primary-subtle"><span class="badge1 text-bg-secondary1">未开始</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">敬请期待</text></svg>
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
+  </section>
 </main>
 
 <footer class="text-muted py-5">
@@ -546,6 +671,9 @@
     </p>
     <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
     <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+    <p>
+      <!-- <img class="img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAAsTAAALEwEAmpwYAAA5z2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMTQgNzkuMTUxNDgxLCAyMDEzLzAzLzEzLTEyOjA5OjE1ICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgICAgICAgICB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIgogICAgICAgICAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgICAgICAgICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpPC94bXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDx4bXA6Q3JlYXRlRGF0ZT4yMDE5LTA5LTIzVDEyOjA5OjI4KzA4OjAwPC94bXA6Q3JlYXRlRGF0ZT4KICAgICAgICAgPHhtcDpNZXRhZGF0YURhdGU+MjAxOS0wOS0yM1QxMjowOToyOCswODowMDwveG1wOk1ldGFkYXRhRGF0ZT4KICAgICAgICAgPHhtcDpNb2RpZnlEYXRlPjIwMTktMDktMjNUMTI6MDk6MjgrMDg6MDA8L3htcDpNb2RpZnlEYXRlPgogICAgICAgICA8eG1wTU06SW5zdGFuY2VJRD54bXAuaWlkOjg0OTNiNTZlLWM2MmMtY2I0Zi1hMzBmLWM5ZDk3MGNjZTkyMjwveG1wTU06SW5zdGFuY2VJRD4KICAgICAgICAgPHhtcE1NOkRvY3VtZW50SUQ+eG1wLmRpZDo5MmFhMDM0YS1lMDk3LTc3NDktYWI1YS03ZTJiMTI1MTk2ZjY8L3htcE1NOkRvY3VtZW50SUQ+CiAgICAgICAgIDx4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ+eG1wLmRpZDo5MmFhMDM0YS1lMDk3LTc3NDktYWI1YS03ZTJiMTI1MTk2ZjY8L3htcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD4KICAgICAgICAgPHhtcE1NOkhpc3Rvcnk+CiAgICAgICAgICAgIDxyZGY6U2VxPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OmFjdGlvbj5jcmVhdGVkPC9zdEV2dDphY3Rpb24+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDppbnN0YW5jZUlEPnhtcC5paWQ6OTJhYTAzNGEtZTA5Ny03NzQ5LWFiNWEtN2UyYjEyNTE5NmY2PC9zdEV2dDppbnN0YW5jZUlEPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6d2hlbj4yMDE5LTA5LTIzVDEyOjA5OjI4KzA4OjAwPC9zdEV2dDp3aGVuPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6c29mdHdhcmVBZ2VudD5BZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpPC9zdEV2dDpzb2Z0d2FyZUFnZW50PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDphY3Rpb24+c2F2ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0Omluc3RhbmNlSUQ+eG1wLmlpZDo4NDkzYjU2ZS1jNjJjLWNiNGYtYTMwZi1jOWQ5NzBjY2U5MjI8L3N0RXZ0Omluc3RhbmNlSUQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDp3aGVuPjIwMTktMDktMjNUMTI6MDk6MjgrMDg6MDA8L3N0RXZ0OndoZW4+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpzb2Z0d2FyZUFnZW50PkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cyk8L3N0RXZ0OnNvZnR3YXJlQWdlbnQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpjaGFuZ2VkPi88L3N0RXZ0OmNoYW5nZWQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICA8L3JkZjpTZXE+CiAgICAgICAgIDwveG1wTU06SGlzdG9yeT4KICAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9wbmc8L2RjOmZvcm1hdD4KICAgICAgICAgPHBob3Rvc2hvcDpDb2xvck1vZGU+MzwvcGhvdG9zaG9wOkNvbG9yTW9kZT4KICAgICAgICAgPHRpZmY6T3JpZW50YXRpb24+MTwvdGlmZjpPcmllbnRhdGlvbj4KICAgICAgICAgPHRpZmY6WFJlc29sdXRpb24+NzIwMDAwLzEwMDAwPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpZUmVzb2x1dGlvbj43MjAwMDAvMTAwMDA8L3RpZmY6WVJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDxleGlmOkNvbG9yU3BhY2U+NjU1MzU8L2V4aWY6Q29sb3JTcGFjZT4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjIwPC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjIyPC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz4jh4n+AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAATMSURBVHjarNVbbBR1FMfx78zOzs5Od7v3btcuEmgFilyqgNdaBI1cAgUxIWCMikFEjRqJPGh8IRgDLxjReAliFEKMCglJIQSoNcolgjEQAbmUUqC7pbS73XZnd2d3ZmfHB7GKwfji7+08/D/5n+T/P0ewbZv/MxJAme4bRTVQBcZxOvcd4I5FL9YWLp1o/X7fz8+X9LL88GNTtwSnTNl9dtdXicaFS0CuB/pJX9gNQGjcmj/AW2QWsPqLF19vtfVOpaek4gj4Kew894H+Sdt7zY+MbQM+B/b886B4C0zp+Hhrx9Or2pfmileUcR4HK5XrrFZ6eOD+KMH7o9LKVQcfP7B5Qxvg+i8wXjqxfv/7O4ZZvnIsz8az+D49Q/q8RbrLYnjBJyyyTvHatmVs2WVin//sW0D5N7Dx6p63u1oWnGrxN0R5OXyK7h1ZxFF+LM2AUgUh4ufoK0dYqp4g+uBdPLpg78KBw1svAeNvAvNnu5CK+z1t573y8d7pzJuukTuZRbw6jOB34Rq0KB65jnNMCCWnk/ryGEvmGHRcnMj2Q1bMI+TdwTHP3HTDeOWn7zZVBDdIBaq1XrJ94LRMGCwi1KvI0/yI1/LIVEh169QFSyAIZHIiroi0CRgzAl45d/AJI5lsDnhkKLuwYzHCzbXksNEeCGEtj+NZ14T62hTEiErNtDD5ggG2TaxGhcTJWYM9R58bAVVPoDGrmYyNFEEJceCYijS7mvTC0VhJDeHXPIW91zG7h5DXNhN8fSo7t2WAKpomS+S7+ikmuuIjYGWwd2E2IzEprhG/R+aj7VX8sCFB04wYPtVL4UyGSn+J4qkM3uQQp9dfYPM2F9EmP5PrhkklS5iD55pHQFHK+7WsSPXABZbOsSibHsw9fYS+/gWxzokRcVCpkQjPjhHruERqy2nyhoMlrU686U60rITkFZ0jX8+t3t4ujr/cakXrWHGvxqa6CB8lGzF7zhBKdyL63OhnMmgNNSQDMb4R3VDtZ8V9/ZS9cfx3CqiBUXtHQBBr7KxNb5fGpMZu3nljGm+vbWGPNhmyJq2FNEG/yM69XnKoQIA1LynMaOiktxMoFqiUtakjoOQ3ppe9Ucw+k0T/WV5tdrGkvYqOfQXOiVOYO/EiMXeKclsdRkZn1ASVt+Ze5vrRyxRMBSUsI/nlCQCCbduUcsefTB/buEPvMyilTEhcoX5xE66oAlYaKy2R69fxjQnC6BAkUnTvPo/uDeMZ68Fdq+JrWD5TDsz/8U8Qh+B6avD0pg+tou5LHepDqrKpndmINahjFvKIqoISrEKQnaSPdlG2JHzT6zGLpH3jW5bJTrVdDsz/o+VSqgLoyWKfW1eiFV90dgPWcB5Ly4Iq45D9yG4whnLkExmU0SGUeJTSUIFiUrPdo3IY5AgGbjwbB4dxcPjNmru9tc5AjNJwhYolUbEcFAc0sCsY6WFynQMIDicIAsVrKZxukehDsbCsai/IqvbXxHaFZgAszvQe2mgkflshOwpVashFOW+AYOIoDVHWDbwTwjgUB4aeQ6wKIwRqr5al+i2KGnn3phVwIwXglczZ6Dp9eGBeyeyZedvEyMSKJngUvxiU3F60a1x1R/wFqabl5GBXf7t+JXNg9ENU/j4Phf97Sf0+ADr3CMhtMiuNAAAAAElFTkSuQmCC" alt=""> -->
+    </p>
   </div>
 </footer>
 

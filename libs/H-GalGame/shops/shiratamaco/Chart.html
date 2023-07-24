@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chart</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
     <!-- <script src="./chart.js"></script> -->
     <!-- <script src="../../libs/chart/chart.min.js"></script> -->
     <link href="../../libs/chart/chart.min.css" rel="stylesheet">
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script> -->
     <!-- <script src="https://cdn.bootcdn.net/ajax/libs/Chart.js/4.2.1/chart.js"></script> -->
     <!-- <script src="https://cdn.staticfile.org/Chart.js/4.3.0/chart.js"></script> -->
-    <!-- <script src="https://cdn.staticfile.org/Chart.js/3.9.1/chart.js"></script> -->
+    <script src="https://cdn.staticfile.org/Chart.js/3.9.1/chart.js"></script>
     <!-- <script src="../../libs/jquery/jquery.min.js"></script> -->
     <!-- <script src="../../libs/jquery.fancybox/jquery.fancybox.min.js"></script> -->
 
@@ -28,16 +28,142 @@
                 <div class=""></div>
             </div>
         </div>
-        <!-- <canvas id="myChart" style="display: block; width: 456px; height: 228px;" width="456"
-            height="228" class="chartjs-render-monitor"></canvas> -->
     </div>
-        <!-- <canvas id="chartjs-tooltip"></canvas> -->
-        <canvas id="myChart"></canvas>
-<script>
+        <canvas id="player-vote-chart-area"></canvas>
+        <div><canvas id="Character-lines"></canvas></div>
+        <div><canvas id="myChart"></canvas></div>
+        <!-- 圆饼 -->
+        <script>
+            window.chartColors = {
+                red: 'rgb(255, 99, 132)',
+                orange: 'rgb(255, 159, 64)',
+                yellow: 'rgb(255, 205, 86)',
+                green: 'rgb(75, 192, 192)',
+                blue: 'rgb(54, 162, 235)',
+                purple: 'rgb(153, 102, 255)',
+                grey: 'rgb(201, 203, 207)'
+            };
+        
+            var ctx = document.getElementById("player-vote-chart-area");
+        
+            var data = {
+                datasets: [{
+                    data: [33, 34, 25, 8],
+                    backgroundColor: [
+                        window.chartColors.red,
+                        window.chartColors.yellow,
+                        window.chartColors.green,
+                        window.chartColors.blue,
+                    ],
+                }],
+                labels: [
+                    "原画•角色",
+                    "剧情",
+                    "音乐•音效",
+                    "演出•系统"
+                ]
+            };
 
-</script>
+            var options = {
+                responsive: true, // 设置图表为响应式，根据屏幕窗口变化而变化
+                interaction: {
+                    intersect: false,
+                    
+                },
+                plugins:{
+                    tooltip: {
+                        enabled: true,
+                        callbacks: {
+                            // label: function(context) {
+                            //     var label = context.label || '';
+                            //     if (label) {
+                            //         label += ': ';
+                            //     }
+                            //     if (context.parsed !== null) {
+                            //         label += context.parsed + '%的玩家认为该游戏的' + context.label + '很赞';
+                            //     }
+                            //     return label;
+                            // }
 
-    <script>
+                            label: function(context) {
+                                var label = '';
+                                if (context.parsed !== null) {
+                                    label += context.parsed + '%的玩家认为该游戏的' + context.label + '很赞';
+                                }
+                                return label;
+                            }
+                        }
+                    },
+                    legend: {
+                        position: 'right',
+                    },
+                },
+            };
+        
+            var myPieChart = new Chart(ctx, {
+                type: "pie",
+                data: data,
+                options: options,
+            });
+        </script>
+        <!-- 柱形图JS -->
+        <script>
+            window.chartColors = {
+                    red: 'rgb(255, 99, 132)',
+                    orange: 'rgb(255, 159, 64)',
+                    yellow: 'rgb(255, 205, 86)',
+                    green: 'rgb(75, 192, 192)',
+                    blue: 'rgb(54, 162, 235)',
+                    purple: 'rgb(153, 102, 255)',
+                    grey: 'rgb(201, 203, 207)'
+                };
+
+                var ctx = document.getElementById("Character-lines");
+                const labels = ['一月份', '二月份', '三月份', '四月份', '五月份', '六月份', '七月份'];  // 设置 X 轴上对应的标签
+                const data_b = {
+                    labels: labels,
+                    datasets: [{
+                        axis: 'y',
+                        label: '柱形图',
+                        data: [65, 59, 80, 81, 56, 55, 40],
+                        fill: false,
+                        backgroundColor: [      // 设置每个柱形图的背景颜色
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 205, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(201, 203, 207, 0.2)'
+                        ],
+                        borderColor: [     //设置每个柱形图边框线条颜色
+                            'rgb(255, 99, 132)',
+                            'rgb(255, 159, 64)',
+                            'rgb(255, 205, 86)',
+                            'rgb(75, 192, 192)',
+                            'rgb(54, 162, 235)',
+                            'rgb(153, 102, 255)',
+                            'rgb(201, 203, 207)'
+                        ],
+                        borderWidth: 1     // 设置线条宽度
+                    }]
+                };
+                const config = {
+                    type: 'bar', // 设置图表类型
+                    data: data_b,  // 设置数据集
+                    options: {
+                        indexAxis: 'y',
+                        plugins:{
+                            legend: {
+                                position: 'right',
+                            },
+                        },
+                    }
+                };
+                const myChart = new Chart(ctx, config);
+        </script>
+<!-- 4.3.0新版本专用 -->
+    <!-- <script>
         window.chartColors = {
             red: 'rgb(255, 99, 132)',
             orange: 'rgb(255, 159, 64)',
@@ -79,18 +205,18 @@
                         },
                     },
                     // 工具提示
-                    tooltip: {
-                        // enabled: true,
-                        // mode: 'single',
-                        // callbacks: {
-                        //     label: function (tooltipItem, data) {
-                        //         return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] +
-                        //             "%的玩家认为该游戏的" +
-                        //             data.labels[tooltipItem.index] +
-                        //             "很赞";
-                        //     }
-                        // }
-                    }
+                    // tooltip: {
+                    //     enabled: true,
+                    //     mode: 'single',
+                    //     callbacks: {
+                    //         label: function (tooltipItem, data) {
+                    //             return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] +
+                    //                 "%的玩家认为该游戏的" +
+                    //                 data.labels[tooltipItem.index] +
+                    //                 "很赞";
+                    //         }
+                    //     }
+                    // }
                     // scales: {
                     //     y: {
                     //         beginAtZero: true
@@ -103,7 +229,7 @@
             document.getElementById("myChart"),
             config
         );
-    </script>
+    </script> -->
 
     <!-- <script>
         $(function () {
@@ -166,17 +292,17 @@
                 }
             }
         };
-        // const chart = new Chart(cxt, {
-        //     type: "pie",
-        //     data: data,
-        //     options: {
-        //         plugins: {
-        //             subtitle: {
-        //                 display: true,
-        //                 text: "subtitle text"
-        //             }
-        //         }}
-        // });
+        const chart = new Chart(cxt, {
+            type: "pie",
+            data: data,
+            options: {
+                plugins: {
+                    subtitle: {
+                        display: true,
+                        text: "subtitle text"
+                    }
+                }}
+        });
     
         var myPieChart = new Chart(ctx, {
             type: "pie",
