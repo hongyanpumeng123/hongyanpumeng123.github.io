@@ -69,10 +69,6 @@
             <div class="inner">
                 <div class="row mb-3 px-4">
                     <h1 class="col-12 col-md p-0">魔女的夜宴</h1>
-                    <div class="col-12 col-md-auto">
-                        <a href="javascript:void(0);" class="btn btn-warning btn-favor"><span class="iconfont"></span>添加关注</a>
-                        <a href="https://store.hikarifield.co.jp/shops" class="btn btn-danger ml-2"><span class="iconfont"></span>所有游戏</a>
-                    </div>
                 </div>
             <div class="row">
                 <div class="col-12 col-lg-8">
@@ -446,10 +442,10 @@
     <footer class="text-muted py-5">
         <div class="container">
           <p class="float-end mb-1">
-            <a href="#">返回顶部</a>
+            <a href="javascript:void(0)" id="back-to-top" onclick="topFunction()">返回顶部</a>
           </p>
           <p class="mb-1">页面模板出自 &copy; HIKARI FIELD STORE</p>
-          <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a><button id="tips" class="btn btn-outline-primary" onclick="location.href='#'">提示</button>.</p>
+          <p class="mb-0">F12</p>
         </div>
     </footer>
       
@@ -457,23 +453,6 @@
 <script src="../../libs/chart/chart.min.js"></script>
 <script src="../../libs/jquery/jquery.min.js"></script>
 <script src="../../libs/jquery.fancybox/jquery.fancybox.min.js"></script>
-<script src="../../libs/sweetalert/sweetalert.min.js"></script>
-<script>
-    document.getElementById("tips").onclick=function(){
-        swal({
-            title: "正在跳转",
-            text: "感谢支持正版",
-            button: false,
-            icon: "success",
-            timer: 1500,
-        });
-    };
-</script>
-<script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-</script>
 <!-- 右侧玩家评价 -->
 <script>
     window.chartColors = {
@@ -579,6 +558,14 @@
 <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<script>
+    function topFunction() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 </script>
 </body>
 </html>
