@@ -12,6 +12,7 @@
     <link href="../../libs/jquery.fancybox/jquery.fancybox.min.css" rel="stylesheet">
     <link href="../../libs/iconfont/iconfont.css" rel="stylesheet">
     <link href="../../libs/apps/apps.css" rel="stylesheet">
+    <link href="https://unpkg.com/@waline/client@v2/dist/waline.css" rel="stylesheet">
     <style>
         /* 自主调试区 */
         /* 介绍超出两行变成省略号 */
@@ -69,6 +70,9 @@
             <div class="inner">
                 <div class="row mb-3 px-4">
                     <h1 class="col-12 col-md p-0">糖调！</h1>
+                    <div class="col-12 col-md-auto">
+                        <span class="btn btn-warning btn-favor"><span class="iconfont"></span> 阅读量：<span class="waline-pageview-count" data-path="/GalGame/shops/sugarfull/"></span>
+                    </div>
                 </div>
             <div class="row">
                 <div class="col-12 col-lg-8">
@@ -282,140 +286,6 @@
                                 <a href="../../downloads/sugarfull/" class="btn btn-block btn-warning" target="_blank">获得额外内容</a>
                             </div>
                         </section>
-                        <section class="project-progress mb-4">
-                            <h4>开发进度</h4>
-                            <div class="table-wrap">
-                                <table class="table table-sm table-borderless progress-table">
-                                    <tbody>
-                                        <tr>
-                                            <th colspan="2">[ 前期制作 ]</th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                网站制作
-                                                <a href="javascript:void(0);" data-placement="top" title="中文版官方网站一般基于日文版官网进行本地化制作。中文版Logo设计也是在这一阶段进行。"
-                                                    class="cursor-help"><span class="iconfont"></span></a>
-                                                <div class="progress">
-                                                    <div role="progressbar" class="progress-bar bg-green" style="width: 100%;">已完成</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                动画制作
-                                                <a href="javascript:void(0);" data-placement="top" title="中文版开场动画或宣传动画的制作通常需要游戏原版开场动画的制作方给予技术支持或素材支持。"
-                                                    class="cursor-help"><span class="iconfont"></span></a>
-                                                <div class="progress">
-                                                    <div role="progressbar" class="progress-bar bg-green" style="width: 100%;">已完成</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">[ 中期制作 ]</th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                首轮翻译
-                                                <a href="javascript:void(0);" data-placement="top" title="是指基于文本所开展的游戏主体翻译工作的第一阶段。"
-                                                    class="cursor-help"><span class="iconfont"></span></a>
-                                                <div class="progress">
-                                                    <div role="progressbar" class="progress-bar bg-green" style="width: 100%;">已完成</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                一次校对
-                                                <a href="javascript:void(0);" data-placement="top" title="是指基于文本所开展的游戏主体翻译工作的第二阶段。"
-                                                    class="cursor-help"><span class="iconfont"></span></a>
-                                                <div class="progress">
-                                                    <div role="progressbar" class="progress-bar bg-green" style="width: 100%;">已完成</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                二次校对
-                                                <a href="javascript:void(0);" data-placement="top" title="是指基于文本所开展的游戏主体翻译工作的第三阶段。"
-                                                    class="cursor-help"><span class="iconfont"></span></a>
-                                                <div class="progress">
-                                                    <div role="progressbar" class="progress-bar bg-green" style="width: 100%;">已完成</div>
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">[ 后期制作 ]</th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                程序制作
-                                                <a href="javascript:void(0);" data-placement="top"
-                                                    title="是指为满足中文版的成品制作而对游戏程序必要的研发或修正。使用与原版程序时一般需要版权方给予技术支持或额外授权。" class="cursor-help"><span
-                                                        class="iconfont"></span></a>
-                                                <div class="progress">
-                                                    <div role="progressbar" class="progress-bar bg-green" style="width: 100%;">已完成</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                素材制作
-                                                <a href="javascript:void(0);" data-placement="top" title="是指对系统UI为主的图像素材进行的本地化制作。"
-                                                    class="cursor-help"><span class="iconfont"></span></a>
-                                                <div class="progress">
-                                                    <div role="progressbar" class="progress-bar bg-green" style="width: 100%;">已完成</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                三次校对
-                                                <a href="javascript:void(0);" data-placement="top" title="是指基于成品所开展的游戏主体翻译工作的最终阶段。"
-                                                    class="cursor-help"><span class="iconfont"></span></a>
-                                                <div class="progress">
-                                                    <div role="progressbar" class="progress-bar bg-green" style="width: 100%;">已完成</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                品控调试
-                                                <a href="javascript:void(0);" data-placement="top" title="是指对成品进行测试与纠错，以及进行细节优化。"
-                                                    class="cursor-help"><span class="iconfont"></span></a>
-                                                <div class="progress">
-                                                    <div role="progressbar" class="progress-bar bg-green" style="width: 100%;">已完成</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="2">[ 发行准备 ]</th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                内容调整
-                                                <a href="javascript:void(0);" data-placement="top" title="针对海外版市场对成品内容而进行必要的调整工作。"
-                                                    class="cursor-help"><span class="iconfont"></span></a>
-                                                <div class="progress">
-                                                    <div role="progressbar" class="progress-bar bg-green" style="width: 100%;">已完成</div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                审核监修
-                                                <a href="javascript:void(0);" data-placement="top" title="向第三方平台提交发行用成品的审核流程，亦同时向开发商提供监修用成品。"
-                                                    class="cursor-help"><span class="iconfont"></span></a>
-                                                <div class="progress">
-                                                    <div role="progressbar" class="progress-bar bg-green" style="width: 100%;">已完成</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                发行排期
-                                                <a href="javascript:void(0);" data-placement="top" title="与开发商或有关各方协调确认成品推出体验版或正式发行的日期。"
-                                                    class="cursor-help"><span class="iconfont"></span></a>
-                                                <div class="progress">
-                                                    <div role="progressbar" class="progress-bar bg-green" style="width: 100%;">已完成</div>
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </section>
                         <section class="game-language">
                             <h4>游戏语言</h4>
                             <div class="table-wrap">
@@ -509,6 +379,7 @@
                         <section class="game-reviews mt-4">
                             <h4>游戏感评</h4>
                             <div class="list-group">
+                                <div id="waline"></div>
                             </div>
                             <div>
                                 <a class="btn btn-block btn-warning mt-2 disabled" href="#">我要发表感评</a>
@@ -595,6 +466,15 @@
 <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    init({
+      el: '#waline',
+      pageview: true,
+      serverURL: 'https://wa.hychuyi.tk/',
+    });
 </script>
 <script>
     function topFunction() {
