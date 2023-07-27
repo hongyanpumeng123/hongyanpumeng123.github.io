@@ -635,11 +635,7 @@
    * @param container 父元素
    * @param contains 子元素
    * @example
-  ```js
-  contains( document, document.body ); // true
-  contains( document.getElementById('test'), document ); // false
-  contains( $('.container').get(0), $('.contains').get(0) ); // false
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">contains</span>( <span class="variable language_">document</span>, <span class="variable language_">document</span>.<span class="property">body</span> ); <span class="comment">// true</span></span><br><span class="line"><span class="title function_">contains</span>( <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;test&#x27;</span>), <span class="variable language_">document</span> ); <span class="comment">// false</span></span><br><span class="line"><span class="title function_">contains</span>( $(<span class="string">&#x27;.container&#x27;</span>).<span class="title function_">get</span>(<span class="number">0</span>), $(<span class="string">&#x27;.contains&#x27;</span>).<span class="title function_">get</span>(<span class="number">0</span>) ); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
    */
   function contains(container, contains) {
       return container !== contains && toElement(container).contains(contains);
@@ -650,10 +646,7 @@
    * @param first 第一个数组
    * @param second 该数组的元素将被追加到第一个数组中
    * @example
-  ```js
-  merge( [ 0, 1, 2 ], [ 2, 3, 4 ] )
-  // [ 0, 1, 2, 2, 3, 4 ]
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">merge</span>( [ <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span> ], [ <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> ] )</span><br><span class="line"><span class="comment">// [ 0, 1, 2, 2, 3, 4 ]</span></span><br></pre></td></tr></table></figure>
    */
   function merge(first, second) {
       each(second, function (_, value) {
@@ -865,28 +858,13 @@
    * 若传入数组，则格式必须和 serializeArray 方法的返回值一样
    * @param obj 对象或数组
    * @example
-  ```js
-  param({ width: 1680, height: 1050 });
-  // width=1680&height=1050
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">param</span>(&#123; <span class="attr">width</span>: <span class="number">1680</span>, <span class="attr">height</span>: <span class="number">1050</span> &#125;);</span><br><span class="line"><span class="comment">// width=1680&amp;height=1050</span></span><br></pre></td></tr></table></figure>
    * @example
-  ```js
-  param({ foo: { one: 1, two: 2 }})
-  // foo[one]=1&foo[two]=2
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">param</span>(&#123; <span class="attr">foo</span>: &#123; <span class="attr">one</span>: <span class="number">1</span>, <span class="attr">two</span>: <span class="number">2</span> &#125;&#125;)</span><br><span class="line"><span class="comment">// foo[one]=1&amp;foo[two]=2</span></span><br></pre></td></tr></table></figure>
    * @example
-  ```js
-  param({ids: [1, 2, 3]})
-  // ids[]=1&ids[]=2&ids[]=3
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">param</span>(&#123;<span class="attr">ids</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]&#125;)</span><br><span class="line"><span class="comment">// ids[]=1&amp;ids[]=2&amp;ids[]=3</span></span><br></pre></td></tr></table></figure>
    * @example
-  ```js
-  param([
-    {"name":"name","value":"mdui"},
-    {"name":"password","value":"123456"}
-  ])
-  // name=mdui&password=123456
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">param</span>([</span><br><span class="line">  &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;name&quot;</span>,<span class="string">&quot;value&quot;</span>:<span class="string">&quot;mdui&quot;</span>&#125;,</span><br><span class="line">  &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;password&quot;</span>,<span class="string">&quot;value&quot;</span>:<span class="string">&quot;123456&quot;</span>&#125;</span><br><span class="line">])</span><br><span class="line"><span class="comment">// name=mdui&amp;password=123456</span></span><br></pre></td></tr></table></figure>
    */
   function param(obj) {
       if (!isObjectLike(obj) && !Array.isArray(obj)) {
@@ -994,15 +972,7 @@
    * 发送 ajax 请求
    * @param options
    * @example
-  ```js
-  ajax({
-    method: "POST",
-    url: "some.php",
-    data: { name: "John", location: "Boston" }
-  }).then(function( msg ) {
-    alert( "Data Saved: " + msg );
-  });
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">ajax</span>(&#123;</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">  <span class="attr">url</span>: <span class="string">&quot;some.php&quot;</span>,</span><br><span class="line">  <span class="attr">data</span>: &#123; <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>, <span class="attr">location</span>: <span class="string">&quot;Boston&quot;</span> &#125;</span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params"> msg </span>) &#123;</span><br><span class="line">  <span class="title function_">alert</span>( <span class="string">&quot;Data Saved: &quot;</span> + msg );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
    */
   function ajax(options) {
       // 是否已取消请求
@@ -1230,12 +1200,7 @@
    * 为 Ajax 请求设置全局配置参数
    * @param options 键值对参数
    * @example
-  ```js
-  ajaxSetup({
-    dataType: 'json',
-    method: 'POST',
-  });
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">ajaxSetup</span>(&#123;</span><br><span class="line">  <span class="attr">dataType</span>: <span class="string">&#x27;json&#x27;</span>,</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
    */
   function ajaxSetup(options) {
       return extend(globalOptions, options);
@@ -1343,25 +1308,13 @@
    *
    * 多个键名可以用空格分隔，或者用数组表示多个键名
     @example
-  ```js
-  // 移除元素上键名为 name 的数据
-  removeData(document.body, 'name');
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 移除元素上键名为 name 的数据</span></span><br><span class="line"><span class="title function_">removeData</span>(<span class="variable language_">document</span>.<span class="property">body</span>, <span class="string">&#x27;name&#x27;</span>);</span><br></pre></td></tr></table></figure>
    * @example
-  ```js
-  // 移除元素上键名为 name1 和 name2 的数据
-  removeData(document.body, 'name1 name2');
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 移除元素上键名为 name1 和 name2 的数据</span></span><br><span class="line"><span class="title function_">removeData</span>(<span class="variable language_">document</span>.<span class="property">body</span>, <span class="string">&#x27;name1 name2&#x27;</span>);</span><br></pre></td></tr></table></figure>
    * @example
-  ```js
-  // 移除元素上键名为 name1 和 name2 的数据
-  removeData(document.body, ['name1', 'name2']);
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 移除元素上键名为 name1 和 name2 的数据</span></span><br><span class="line"><span class="title function_">removeData</span>(<span class="variable language_">document</span>.<span class="property">body</span>, [<span class="string">&#x27;name1&#x27;</span>, <span class="string">&#x27;name2&#x27;</span>]);</span><br></pre></td></tr></table></figure>
    * @example
-  ```js
-  // 移除元素上所有数据
-  removeData(document.body);
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 移除元素上所有数据</span></span><br><span class="line"><span class="title function_">removeData</span>(<span class="variable language_">document</span>.<span class="property">body</span>);</span><br></pre></td></tr></table></figure>
    */
   function removeData(element, name) {
       // @ts-ignore
@@ -1402,10 +1355,7 @@
    * 过滤掉数组中的重复元素
    * @param arr 数组
    * @example
-  ```js
-  unique([1, 2, 12, 3, 2, 1, 2, 1, 1]);
-  // [1, 2, 12, 3]
-  ```
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">unique</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">12</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>]);</span><br><span class="line"><span class="comment">// [1, 2, 12, 3]</span></span><br></pre></td></tr></table></figure>
    */
   function unique(arr) {
       var result = [];
