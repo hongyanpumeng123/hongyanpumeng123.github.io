@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 1834440 */
+  src: url('iconfont.woff2') format('woff2'),
+       url('iconfont.woff') format('woff'),
+       url('iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-comments:before {
+  content: "\e7b2";
+}
+
+.icon-coupons:before {
+  content: "\e6ed";
+}
+
+.icon-truck:before {
+  content: "\e637";
+}
+
+.icon-headset:before {
+  content: "\ebb8";
+}
+
+.icon-help2:before {
+  content: "\e64c";
+}
+
+.icon-moneybag:before {
+  content: "\e7d1";
+}
+
+.icon-monitor:before {
+  content: "\e630";
+}
+
+.icon-games-:before {
+  content: "\e62f";
+}
+
+.icon-pc1:before {
+  content: "\e665";
+}
+
+.icon-windows:before {
+  content: "\e668";
+}
+
+.icon-pc:before {
+  content: "\e671";
+}
+
+.icon-Join:before {
+  content: "\e627";
+}
+
+.icon-language:before {
+  content: "\e693";
+}
+
+.icon-coupon:before {
+  content: "\e7fd";
+}
+
+.icon-jifenchoujiang:before {
+  content: "\e7f1";
+}
+
+.icon-points:before {
+  content: "\e727";
+}
+
+.icon-config:before {
+  content: "\e612";
+}
+
+.icon-award:before {
+  content: "\e859";
+}
+
+.icon-favoriteoutline:before {
+  content: "\e68e";
+}
+
+.icon-favorites_fill:before {
+  content: "\e63d";
+}
+
+.icon-gift:before {
+  content: "\e842";
+}
+
+.icon-Message:before {
+  content: "\e628";
+}
+
+.icon-member:before {
+  content: "\e622";
+}
+
+.icon-help:before {
+  content: "\e615";
+}
+
+.icon-game:before {
+  content: "\e6df";
+}
+
+.icon-iconfontcart-copy:before {
+  content: "\e61d";
+}
+
+.icon-goods:before {
+  content: "\e657";
+}
+
+.icon-weibo:before {
+  content: "\e882";
+}
+
+.icon-bilibili-fill:before {
+  content: "\eea8";
+}
+

@@ -1,0 +1,22 @@
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.btn-block+.btn-block {
+    margin-top: 0.5rem;
+}
+
+input[type=button].btn-block,
+input[type=reset].btn-block,
+input[type=submit].btn-block {
+    width: 100%
+}
+.heimu:hover,.heimu:active {
+    color:white;
+}
+.heimu {
+    transition: color 0.15s linear;
+    background-color: #000;
+    color: #000;
+    text-shadow: none;
+}
