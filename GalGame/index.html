@@ -693,22 +693,25 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper"></script>
-    
     <script>
-        window.addEventListener('load', function() {
-            var loadTime = performance.now();
-            var toastEl = document.querySelector('.toast');
-            var toastBody = toastEl.querySelector('.toast-body');
-            toastBody.textContent = '页面加载完成！加载时间：' + Math.round(loadTime) + ' 毫秒';
-            var toast = new bootstrap.Toast(toastEl);
-            toast.show();
+      (function () {
+        function handleLoad() {
+          var loadTime = performance.now();
+          var toastEl = document.querySelector('.toast');
+          var toastBody = toastEl.querySelector('.toast-body');
+          toastBody.textContent = '页面加载完成！加载时间：' + Math.round(loadTime) + ' 毫秒';
 
-            var toastContainer = document.getElementById('toast-container');
-            toastContainer.style.right = '0.27rem';
-            setTimeout(function() {
-                toastContainer.style.right = '-200px';
-            }, 2500);
-        });
+          var toast = new bootstrap.Toast(toastEl);
+          toast.show();
+
+          var toastContainer = document.getElementById('toast-container');
+          toastContainer.style.right = '0.27rem';
+          setTimeout(function () {
+            toastContainer.style.right = '-200px';
+          }, 2500);
+        }
+        window.onload = handleLoad;
+      })();
     </script>
     <script>
       function topFunction() {
@@ -720,7 +723,7 @@
     </script>
 
     <!-- 温馨提示(弹窗) -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script> -->
     <div class="modal fade" id="warnings" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="warningsLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
@@ -728,23 +731,9 @@
               <h1 class="modal-title fs-5" id="warningsLabel">台风预警</h1>
               </div>
               <div class="modal-body">
-                <h4><a href="https://weather.cma.cn/web/channel-376.html" target="_blank">中央气象台7月29日10时解除台风蓝色预警：</a></h4>
+                <h4><a href="https://weather.cma.cn/web/channel-376.html" target="_blank">中央气象台</a></h4>
                 <div role="alert" class="alert alert-danger mb-0">
-                  <p style="white-space:pre-wrap;" class="text-body">今年第5号台风“杜苏芮”（DOKSURI）今天（29日）上午8点钟由江西北部移入安徽南部，并由热带风暴级减弱为热带低压，其中心位于安徽省安庆市宿松县境内，就是北纬30.0度、东经116.5度，中心附近最大风力有7级（16米/秒），中心最低气压为999百帕。
-
-预计，热带低压“杜苏芮”将以每小时25-30公里的速度向北偏西方向移动，强度将进一步减弱。为此，中央气象台7月29日10时解除台风蓝色预警。但是，受热带低压“杜苏芮”及减弱后的残余环流影响，29日14时到30日14时，渤海南部、黄海西部、东海西北部、长江口及杭州湾附近海域仍将有6-7级、阵风8级的偏南风；安徽北部和西南部、江苏西北部、山东中西部、河南中北部、河北、北京、天津、山西东部等地部分地区有大到暴雨，其中，河北中南部、北京南部、河南北部等地部分地区有大暴雨，河北中部沿山一带等地局地特大暴雨（250～300毫米），江西东北部、福建西北部和东南部沿海、广东中部、广西东部等地部分地区有大雨或暴雨。
-
-防御指南：
-
-1.政府及相关部门按照职责做好防台风抢险应急工作。
-
-2.相关水域水上作业和过往船舶应当回港避风，加固港口设施，防止船舶走锚、搁浅和碰撞。
-
-3.停止室内外大型集会和高空等户外危险作业。
-
-4.加固或者拆除易被风吹动的搭建物，人员切勿随意外出，应尽可能待在防风安全的地方，确保老人小孩留在家中最安全的地方，危房人员及时转移。当台风中心经过时风力会减小或者静止一段时间，切记强风将会突然吹袭，应当继续留在安全处避风。
-
-5.相关地区应当注意防范强降水可能引发的山洪、地质灾害。</p>
+                  <p style="white-space:pre-wrap;" class="text-body">卡努</p>
                     <div class="intro-pic text-center">
                       <img style="max-width: 100%;" src="https://weather.cma.cn/file/2023/07/28/SEVP_NMC_IMAT_SFER_EWT_ACHN_L88_P9_20230728220002400_base64_1.png?v=1690583056955" alt="" srcset="">
                     </div>
@@ -756,7 +745,7 @@
           </div>
       </div>
     </div>
-    <script>
+    <!-- <script>
       $(document).ready(function() {
           // 检查 cookie，如果存在则不弹出模态框
           if (document.cookie.indexOf("modalShown") == -1) {
@@ -769,6 +758,6 @@
               document.cookie = "modalShown=true; expires=" + date.toUTCString() + "; path=/";
           }
       });
-    </script>
+    </script> -->
   </body>
 </html>
