@@ -482,6 +482,22 @@
         options: options,
     });
 </script>
+<!-- 图片预加载 (Test) -->
+<script defer>
+    const carousel = document.getElementById("carouselExampleCaptions");
+    const carouselItems = carousel.querySelectorAll(".carousel-item");
+
+    carousel.addEventListener("slid.bs.carousel", function () {
+        const activeItem = carousel.querySelector(".carousel-item.active");
+        const nextItem = activeItem.nextElementSibling;
+
+        if (nextItem) {
+            const img = nextItem.querySelector("img");
+            const src = img.getAttribute("data-src");
+            img.setAttribute("src", src);
+        }
+    });
+</script>
 <!-- 激活工具提示 -->
 <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
