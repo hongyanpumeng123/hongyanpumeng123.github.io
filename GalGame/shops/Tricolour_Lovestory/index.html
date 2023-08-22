@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三色△绘恋(Tricolour Lovestory)_Gal记录页</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link href="../../libs/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../libs/apps/index.css" rel="stylesheet">
+    <link href="../../libs/chart/chart.min.css" rel="stylesheet">
+    <link href="../../libs/jquery.fancybox/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="../../libs/iconfont/iconfont.css" rel="stylesheet">
+    <link href="../../libs/apps/apps.css" rel="stylesheet">
+    <link href="https://unpkg.com/@waline/client@v2/dist/waline.css" rel="stylesheet">
+    <style>
+        /* 自主调试区 */
+        .chara1{
+            color: #9762e2;
+        }
+        .chara2{
+            color: #ee8115;
+        }
+        .bg-chara1{
+            background-color: #9762e2;
+        }
+        .bg-chara2{
+            background-color: #ee8115;
+        }
+        /* 介绍超出两行变成省略号 */
+        .test-hidden-subtitle-h4 {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; height:3.5em;}
+        #hid{display:none!important}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-md-7 py-4">
+                <h4 class="text-white">关于</h4>
+                <p class="text-light">三色△绘恋(Tricolour Lovestory)</p>
+              </div>
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h4 class="text-white">友情链接</h4>
+                <ul class="list-unstyled">
+                  <li><a href="https://store.hikarifield.co.jp/shops" target="_blank" class="link-warning">HIKARI FIELD STORE官网</a></li>
+                  <li><a href="https://store.steampowered.com/" target="_blank" class="link-warning">STEAM官网</a></li>
+                  <li><a href="https://sekaiproject.com/project-status/" target="_blank" class="link-warning">Sekai Project官网</a></li>
+                  <li><a href="https://www.yuzu-soft.com/products.html" target="_blank" class="link-warning">YUZU-SOFT官网</a></li>
+                  <!-- <li><a href="#" target="_blank" class="text-white">Email me</a></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+          <div class="container">
+            <a href="javascript:window.history.back(-1);" class="navbar-brand d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <strong>GalGame记录页</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+    </header>
+    <!-- 顶部警告提示 -->
+    <div class="top-notice">
+        <div role="alert" class="alert alert-info text-center mb-0">
+            <span>适龄提示：<span class="badge bg-success">全年龄</span></span>
+        </div>
+    </div>
+    <main class="app">
+        <section class="banner">
+            <img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/library_hero.jpg" alt="三色△绘恋(Tricolour Lovestory)" class="img lozad">
+            <div class="mask"></div>
+        </section>
+        <section class="shop-top">
+            <div class="inner">
+                <div class="row mb-3 px-4">
+                    <h1 class="col-12 col-md p-0">三色△绘恋(Tricolour Lovestory)</h1>
+                    <div class="col-12 col-md-auto">
+                        <span class="btn btn-warning btn-favor"><span class="iconfont"></span> 阅读量:<span class="waline-pageview-count" data-path="/GalGame/shops/Tricolour_Lovestory/">加载中</span>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="shop-carousel">
+                        <div class="bd-example-snippet bd-code-snippet">
+                            <div class="bd-example">
+                                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10" aria-label="Slide 11" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11" aria-label="Slide 12" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12" aria-label="Slide 13" class=""></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                                <a data-fancybox data-type="iframe" data-width="1280" data-height="720" href="//player.bilibili.com/player.html?aid=21302785">
+                                                <img data-src="../../images/Tricolour_Lovestory.jpg" class="d-block w-100 lozad">
+                                                <img data-src="../../images/common/video_play_btn.png" class="d-block w-100 video-play-btn lozad"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="../../images/Tricolour_Lovestory.jpg">
+                                                <img data-src="../../images/Tricolour_Lovestory.jpg" class="d-block w-100 lozad"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_6ca8391f66072e8c96031a5addd56b426ed70671.jpg">
+                                                <img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_6ca8391f66072e8c96031a5addd56b426ed70671.jpg" class="d-block w-100 lozad"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_363fc109d12537e8ccfe913d917f827b51db7e31.jpg?t=1667843370">
+                                                <img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_363fc109d12537e8ccfe913d917f827b51db7e31.jpg?t=1667843370" class="d-block w-100 lozad"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_75ab72382da5cb70862e2d7bf4827cbda961a2db.jpg?t=1667843370">
+                                                <img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_75ab72382da5cb70862e2d7bf4827cbda961a2db.jpg?t=1667843370" class="d-block w-100 lozad"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_2776d7953af6d0e4cdcee0bce50e6c73b84cb9b7.jpg?t=1667843370">
+                                                <img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_2776d7953af6d0e4cdcee0bce50e6c73b84cb9b7.jpg?t=1667843370" class="d-block w-100 lozad"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_5334d845ea691c8b452f663f08cb667ca5ebe019.jpg?t=1667843370">
+                                                <img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_5334d845ea691c8b452f663f08cb667ca5ebe019.jpg?t=1667843370" class="d-block w-100 lozad"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_759d5276655caaea4bdabcd68db3d9b0b1160a09.jpg?t=1667843370">
+                                                <img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_759d5276655caaea4bdabcd68db3d9b0b1160a09.jpg?t=1667843370" class="d-block w-100 lozad"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_40b461da4ffb3c32971404081076c772b54c8190.jpg?t=1667843370">
+                                                <img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_40b461da4ffb3c32971404081076c772b54c8190.jpg?t=1667843370" class="d-block w-100 lozad"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_2872b4e644e47d5ed46e118bd481c3b63ab5dfec.jpg?t=1667843370">
+                                                <img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_2872b4e644e47d5ed46e118bd481c3b63ab5dfec.jpg?t=1667843370" class="d-block w-100 lozad"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_c6b911df7617becc9e02db3d7346acde34a604c4.jpg?t=1667843370">
+                                                <img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_c6b911df7617becc9e02db3d7346acde34a604c4.jpg?t=1667843370" class="d-block w-100 lozad"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_30595b7a4281858c3de8edc661e3026e3a02a373.jpg?t=1667843370">
+                                                <img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_30595b7a4281858c3de8edc661e3026e3a02a373.jpg?t=1667843370" class="d-block w-100 lozad"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_d5c1f247a2984cdba8c410fcacb1b1e6b32ca1c9.jpg?t=1667843370">
+                                                <img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/668630/ss_d5c1f247a2984cdba8c410fcacb1b1e6b32ca1c9.jpg?t=1667843370" class="d-block w-100 lozad"></a>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="player-vote">
+                        <h4>玩家评价</h4>
+                        <div class="player-vote-chart my-3">
+                            <canvas id="player-vote-chart-area"></canvas>
+                        </div>
+                    </div>
+                    <div class="start-vote" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="暂未开放">
+                        <a href="https://store.hikarifield.co.jp/shop/sothewitch/vote" class="btn btn-block btn-warning disabled">进行评价<small>（可获得积分奖励）</small></a>
+                    </div>
+                    <div class="game-info">
+                        <h4>游戏信息</h4>
+                        <div class="wrap">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <th>游戏名称</th>
+                                        <td>三色△绘恋</td>
+                                    </tr>
+                                    <tr>
+                                        <th>游戏类型</th>
+                                        <td>文字冒险ADV</td>
+                                    </tr>
+                                    <tr>
+                                        <th>游戏品牌</th>
+                                        <td>HL-Galgame</td>
+                                    </tr>
+                                    <tr>
+                                        <th>发行商</th>
+                                        <td>SakuraGame</td>
+                                    </tr>
+                                    <tr>
+                                        <th>发售日期</th>
+                                        <td>2017-09-21</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="game-hp"><a href="https://www.hl-avg.com/" target="_blank" class="btn btn-block btn-warning">
+                            游戏中文官网
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="shop-body">
+            <div class="inner">
+                <div class="row">
+                    <div class="col-12 col-lg-8"><!-- col-12 col-lg-9 pt-2 -->
+                        <section class="buy-game mb-3">
+                            <div class="product-box ">
+                                <div class="row">
+                                    <div class="col-12 col-lg-9 pt-2">
+                                        <div class="discount-detail">
+                                            <h4>购买: 三色△绘恋(Tricolour Lovestory)
+                                                <small>
+                                                    <a href="https://store.steampowered.com/app/668630/_/" target="_blank" class="price">(从STEAM)</a>
+                                                </small>
+                                            </h4>
+                                            <iframe title="前往STEAM购买" src="https://store.steampowered.com/widget/668630/" frameborder="0" width="100%" height="190"></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-3 align-self-center">
+                                        <div class="price text-center"><span class="badge badge-warning d-none">促销价</span>
+                                            <span class="discount-price">¥3.3</span>
+                                            <span class="original-price">¥11</span>
+                                        </div>
+                                        <button type="button" class="btn btn-buy btn-warning btn-block" onclick="location.href='//store.steampowered.com/app/668630/_/'">
+                                            <span class="iconfont"></span>
+                                            立即购买
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="introduction mb-3">
+                            <h3>游戏介绍</h3>
+                            <div class="wrap">
+                                <p>
+                                    ——那是，朝思夜想也未尝得到的自由<br>
+                                    ——那是，至今为止都不曾体会的懵懂<br>
+                                    ——那是，将我们三色交织在一起的绘卷
+                                </p>
+                            </div>
+                            <h3>剧情简介</h3>
+                            <div class="wrap">
+                                <p>2005年，江城的暖秋。<br>
+                                    <br>
+                                    童年有如被铁笼囚住一般，早已被灰色浸染的男孩，<br>
+                                    <br>
+                                    第一次走进名为「艺术班」的教室之中。<br>
+                                    <br>
+                                    两个色彩截然不同的少女，<br>
+                                    <br>
+                                    同时伸出双手——<br>
+                                    <br>
+                                    相会、再会、交织、着色……<br>
+                                    <br>
+                                    来不及找到心中的那抹缤纷，<br>
+                                    <br>
+                                    男孩已经提起画笔。<br>
+                                    <br>
+                                    「……「一起画画」啊……」<br>
+                                    <br>
+                                    「……嘿嘿，现在是我们三个人呢……」
+                                </p>
+                            </div>
+                            <h3>角色介绍</h3>
+                            <div class="wrap">
+                                <div class="intro-pic">
+                                    <img data-src="./images/intro/CG01.png" alt="" srcset="" class="lozad">
+                                    <br>
+                                    <strong>文 芷 wen zhi</strong> &nbsp;&nbsp;<span class="badge bg-primary">CV：朱雀橙</span>
+                                    <p>
+                                        <span class="badge rounded-pill bg-chara1">Birthday:Oct.7</span> 
+                                        <span class="badge rounded-pill bg-chara1">Height:162cm</span> 
+                                        <span class="badge rounded-pill bg-chara1">Weight:51kg</span><br>
+                                        <span class="chara1">B</span>：96(D) <span class="chara1">W</span>：60 <span class="chara1">H</span>：87<br>
+                                        本作的女主角之一，17 岁读高二。<br>
+                                        和主角一样同为艺术班的插班生，并且恰巧成为了同桌。<br>
+                                        紫水晶一般的深邃双瞳、柔顺的黑色长发、文静可爱的侧脸，还有走在哪里都会引人注意的胸围，这么一位“冰山美人”——<br>
+                                        面对来自同桌的问候，她一开始以极其冷淡的方式作为回应。这种不合群的一面也很快激起了其他同学的排斥和不解。<br>
+                                        老师眼中，文芷是一个绘画天才，美术实力在整个地区名利前茅。但与其外表和在画纸上显露的气质不符的是，日常生活中的她经常没什么主见。可能也是因为这个，她的画中似乎缺失了些什么。
+                                    </p>
+                                    <img data-src="./images/intro/CG02.png" alt="" srcset="" class="lozad">
+                                    <br>
+                                    <strong>墨 小菊 Mo Xiaoju</strong> &nbsp;&nbsp;<span class="badge bg-primary">CV：小N</span>
+                                    <p>
+                                        <span class="badge rounded-pill bg-chara2">Birthday: Aug.10</span>
+                                        <span class="badge rounded-pill bg-chara2">Height:157cm</span>
+                                        <span class="badge rounded-pill bg-chara2">Weight:44kg</span><br>
+                                        <span class="chara2">B</span>：82(A) <span class="chara2">W</span>：58 <span class="chara2">H</span>：85<br>
+                                        本作的女主角之一，17 岁读高二。<br>
+                                        性格阳光活泼，十分要强那种，很少直率地说出心里话。<br>
+                                        作为住在同一个小区的青梅竹马，从七岁起便和主角相识。而且自小以来对他就有着不太一般的保护欲，明知年岁较小却总强行自称姐姐。在主角被父母关在家里的那段黑暗的时间，是最值得依靠的知心好友。<br>
+                                        因为某些原因，现在和主角处于「绝交」的状态之中。
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="recommends">
+                            <div class="row">
+                                <div class="mb-4 col-12 col-lg-6">
+                                    <h3 class="mb-3">相近题材产品</h3> <a href="../amairo_chocolate/"><img
+                                        data-src="../../images/Amairo-Chocolate.webp" class="lozad">
+                                        <div class="img-mask"></div>
+                                    </a>
+                                </div>
+                                <div class="mb-4 col-12 col-lg-6">
+                                    <h3 class="mb-3">相近题材产品</h3> <a href="../amairo_chocolate_2/"><img
+                                        data-src="../../images/amairo_chocolate_2_616x353.jpg" class="lozad">
+                                        <div class="img-mask"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <section class="download">
+                            <h4>相关资源</h4>
+                            <div class="py-3 wrap">
+                                <span tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="3.3要啥自行车"><a href="#" class="btn btn-block btn-warning disabled" target="_blank">获得额外内容</a></span>
+                            </div>
+                        </section>
+                        <section class="game-language">
+                            <h4>游戏语言</h4>
+                            <div class="table-wrap">
+                                <table class="language-table table table-sm table-borderless">
+                                    <thead class="bg-warning">
+                                        <tr>
+                                            <th>语言 / 项目</th>
+                                            <th>界面</th>
+                                            <th>完全音频</th>
+                                            <th>字幕</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>简体中文</th>
+                                            <td>
+                                                ✔
+                                            </td>
+                                            <td>✔</td>
+                                            <td>
+                                                ✔
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>英文</th>
+                                            <td>
+                                                ✔
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                ✔
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="game-sysreq mt-4">
+                            <h4>系统需求</h4>
+                            <div class="table-wrap">
+                                <table class="sysreq-table table table-sm table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <th>操作系统</th>
+                                            <td>Windows 7或以上版本 简体中文版系统</td>
+                                        </tr>
+                                        <tr>
+                                            <th>CPU</th>
+                                            <td>2Ghz</td>
+                                        </tr>
+                                        <tr>
+                                            <th>内存</th>
+                                            <td>512MB</td>
+                                        </tr>
+                                        <tr>
+                                            <th>分辨率</th>
+                                            <td>1280×720</td>
+                                        </tr>
+                                        <tr>
+                                            <th>显存</th>
+                                            <td>128MB</td>
+                                        </tr>
+                                        <tr>
+                                            <th>硬盘空间</th>
+                                            <td>4GB</td>
+                                        </tr>
+                                        <tr>
+                                            <th>DirectX</th>
+                                            <td>9.0</td>
+                                        </tr>
+                                        <tr>
+                                            <th>声卡</th>
+                                            <td>PCM</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="game-reviews mt-4">
+                            <h4>游戏感评</h4>
+                            <div class="list-group">
+                                <div id="waline"></div>
+                            </div>
+                            <div>
+                                <a class="btn btn-block btn-warning mt-2 disabled" href="#">我要发表感评</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="text-muted py-5">
+        <div class="container">
+          <p class="float-end mb-1">
+            <a href="javascript:void(0)" id="back-to-top" onclick="topFunction()">返回顶部</a>
+          </p>
+          <p class="mb-1">页面主题框架使用Bootstrap!图片版权归官方所有!</p>
+          <p class="mb-0">页面仿照 © HIKARI FIELD STORE</p>
+        </div>
+    </footer>
+
+<!-- <script src="https://cdn.bootcdn.net/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script> -->
+<script src="https://cdn.bootcdn.net/ajax/libs/lozad.js/1.16.0/lozad.min.js"></script>
+<script src="../../libs/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="../../libs/chart/chart.min.js"></script>
+<script src="../../libs/jquery/jquery.min.js"></script>
+<script src="../../libs/jquery.fancybox/jquery.fancybox.min.js"></script>
+
+<!-- 右侧玩家评价 -->
+<script>
+    window.chartColors = {
+        red: 'rgb(255, 99, 132)',
+        orange: 'rgb(255, 159, 64)',
+        yellow: 'rgb(255, 205, 86)',
+        green: 'rgb(75, 192, 192)',
+        blue: 'rgb(54, 162, 235)',
+        purple: 'rgb(153, 102, 255)',
+        grey: 'rgb(201, 203, 207)'
+    };
+
+    var ctx = document.getElementById("player-vote-chart-area");
+
+    var data = {
+        datasets: [{
+            data: [50, 50, 50, 50],
+            backgroundColor: [
+                window.chartColors.red,
+                window.chartColors.yellow,
+                window.chartColors.green,
+                window.chartColors.blue,
+            ],
+        }],
+        labels: [
+            "原画•角色",
+            "剧情",
+            "音乐•音效",
+            "演出•系统"
+        ]
+    };
+
+    var options = {
+        legend: {
+            position: 'right',
+        },
+        tooltips: {
+            enabled: true,
+            mode: 'single',
+            callbacks: {
+                label: function (tooltipItem, data) {
+                    return data.datasets[0].data[tooltipItem.index] +
+                        "%的玩家认为该游戏的" +
+                        data.labels[tooltipItem.index] +
+                        "很赞";
+                }
+            }
+        }
+    };
+
+    var myPieChart = new Chart(ctx, {
+        type: "pie",
+        data: data,
+        options: options,
+    });
+</script>
+<!-- 图片预加载 (Test) -->
+<script defer>
+    const carousel = document.getElementById("carouselExampleCaptions");
+    const carouselItems = carousel.querySelectorAll(".carousel-item");
+
+    carousel.addEventListener("slid.bs.carousel", function () {
+        const activeItem = carousel.querySelector(".carousel-item.active");
+        const nextItem = activeItem.nextElementSibling;
+
+        if (nextItem) {
+            const img = nextItem.querySelector("img");
+            const src = img.getAttribute("data-src");
+            img.setAttribute("src", src);
+        }
+    });
+</script>
+<!-- 激活工具提示 -->
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    init({
+      el: '#waline',
+      pageview: true,
+      serverURL: 'https://wa.hychuyi.tk/',
+      emoji: [
+        '//unpkg.com/@waline/emojis@1.1.0/tieba',
+        '//unpkg.com/@waline/emojis@1.1.0/bilibili',
+        ],
+    });
+</script>
+<script>
+    const observer = lozad('.lozad', {
+        rootMargin: '10px 0px',
+        threshold: 0.1,
+        enableAutoReload: true
+    });
+    observer.observe();
+    function topFunction() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+</body>
+</html>
