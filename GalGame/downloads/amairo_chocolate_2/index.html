@@ -50,7 +50,7 @@
             <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
                 <h4 class="text-white">关于</h4>
-                <p class="text-light">巧克甜恋2</p>
+                <p class="text-light">《巧克甜恋2》（日语：あまいろショコラータ）是由Cabbage Soft制作发行的系列恋爱文字冒险游戏，Steam版由Sekai Project代理。</p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
                 <h4 class="text-white">友情链接</h4>
@@ -77,6 +77,22 @@
         </div>
     </header>
     <main class="main bg-light">
+        <section class="banner">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000" >
+                        <img src="../../shops/amairo_chocolate/images/banner.png" class="d-block w-100" alt="巧克甜恋">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000" >
+                        <img src="../../shops/amairo_chocolate/images/banner1.png" class="d-block w-100" alt="巧克甜恋">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000" >
+                        <img src="../../shops/amairo_chocolate/images/banner2.png" class="d-block w-100" alt="巧克甜恋">
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
         <div class="page-content px-3 py-4 px-md-4 px-lg-5">
             <div role="alert" class="alert alert-success text-center mb-0">
                 <h2 class="text-body">巧克甜恋2_相关下载页</h2>
@@ -97,17 +113,25 @@
         <section class="page-content px-3 py-4 px-md-4 px-lg-5">
         <div class="downloads box">
             <div class="title">
-                <h3>安全提示(分流补丁)<small>(2023.06.29)</small></h3>
+                <h3>安全提示(分流补丁)<small>(2023.09.29)</small></h3>
             </div>
             <div class="open-url mt-3">
                 <p>您即将离开本站并跳转至以下网址，该网页内容与本站无关，请确认是否继续访问？</p>
                 <p>点击下方链接及表示您同意</p>
-                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="百度网盘">百度网盘</button>
-                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="OneDrive">OneDrive</button>
-                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="阿里云盘">阿里云盘</button>
-                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="Google盘">Google盘</button>
+                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="百度网盘">百度网盘(s8ms)</button>
+                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="OneDrive">OneDrive(baiyv)</button>
+                <button type="button" class="btn btn-primary mt-3 disabled" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="阿里云盘">阿里云盘</button>
+                <button type="button" class="btn btn-primary mt-3 disabled" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="Google盘">Google盘</button>
             </div>
         </div>
+        </section>
+        <section class="page-content px-3 py-4 px-md-4 px-lg-5">
+            <div class="downloads box">
+                <div class="title">
+                    <h3>资源失效反馈/评论<small>(试运行)</small></h3>
+                </div>
+                <div id="waline"></div>
+            </div>
         </section>
     </main>
     <footer class="text-muted py-5">
@@ -120,6 +144,7 @@
             阅读量:<span class="waline-pageview-count" data-path="/GalGame/download/amairo_chocolate_2/">加载中</span>
         </p>
         <p class="mb-0">页面协助 Bing Ai 和 F12</p>
+        <p class="mb-0">友情链接：<a href="https://tieba.baidu.com/f?kw=巧克甜恋" target="_blank">巧克甜恋贴吧</a>&nbsp;|&nbsp;<a href="https://tieba.baidu.com/f?kw=巧克甜恋2" target="_blank">巧克甜恋2贴吧</a></p>
         </div>
     </footer>
     <!-- i18 -->
@@ -169,8 +194,8 @@
     <script>
         const exampleModal = document.getElementById('tips')
         const links = {
-            "百度网盘": "https://pan.baidu.com/",
-            "OneDrive": "https://onedrive.live.com/",
+            "百度网盘": "https://pan.baidu.com/s/1UkDC-vOXRpDizUEzfKJX3g?pwd=s8ms",
+            "OneDrive": "https://pan.mikublog.repl.co/s/E7cm",
             "阿里云盘": "https://www.aliyundrive.com/",
             "Google盘": "https://drive.google.com/"
         };
@@ -201,9 +226,9 @@
         import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
     
         init({
-          el: '#waline',
-          pageview: true,
-          serverURL: 'https://wa.hychuyi.tk/',
+            el: '#waline',
+            pageview: true,
+            serverURL: 'https://wa.hychuyi.tk/',
         });
     </script>
     <script>
