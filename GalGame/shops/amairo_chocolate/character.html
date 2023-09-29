@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>角色介绍页</title>
+</head>
+<body>
+        <!-- <link rel="stylesheet" href="https://cabbage-soft.com/amachoco_cn/assets/css/index.min.css?ver=191122"> -->
+        
+        <div class="chocolate">
+
+            <link rel="stylesheet" href="./assets/css/slick.min.css">
+            <link rel="stylesheet" href="./assets/css/index.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.5/css/ionicons.min.css">
+
+            <main class="mv">
+                <div class="sp_mv">
+                    <img class="mv_img" src="assets/images/mv-sp.jpg" alt="" loading="lazy">
+                    <img class="titlelogo" src="assets/images/amairo_logo-blur.png" alt="あまいろショコラータ" loading="lazy">
+                    <img class="catch" src="assets/images/catch.svg" alt="しっぽカフェへようこそ！" loading="lazy">
+                </div>
+                <div class="pc_mv">
+                    <ul id="mv__layer">
+                        <li class="layer layer1"><img src="assets/images/mv-pc_layer1.png" alt="" loading="lazy"></li>
+                        <li class="layer layer2" data-depth="0.1">
+                            <picture>
+                                <source media="(max-width:1920px)" srcset="assets/images/mv-pc_layer2.png 1920w">
+                                <source media="(min-width:1921px)" srcset="assets/images/mv-pc_layer2-large.png 2880w">
+                                <img src="assets/images/mv-pc_layer2.png" alt="" loading="lazy">
+                            </picture>
+                        </li>
+                        <li class="layer layer3" data-depth="0.2"><img src="assets/images/mv-pc_layer3.png" alt="" loading="lazy"></li>
+                        <li class="layer layer4" data-depth="0.4"><img src="assets/images/mv-pc_layer4.png" alt="" loading="lazy"></li>
+                    </ul>
+                    <img class="titlelogo" src="assets/images/amairo_logo-blur.png" alt="あまいろショコラータ" loading="lazy">
+                    <img class="catch" src="assets/images/catch.svg" alt="しっぽカフェへようこそ" loading="lazy">
+                    <img class="release" src="assets/images/releasedate.svg" alt="2020年1月31日発売" loading="lazy">
+                </div>
+            </main>
+            <section id="character" class="character sec_wfull">
+                <div class="character__bg"></div>
+                <h2><img src="assets/images/sec_title_character.svg" alt="CHARACTER" loading="lazy"></h2>
+                <div class="character_slider__thumn">
+                    <ul class="thumn__list">
+                        <li class="chara_nav__btn active" data-chara="0">
+                            <img src="assets/images/chara_icon_chieri.png" alt="千絵莉" loading="lazy">
+                            <p>雪村千绘莉</p>
+                        </li>
+                        <li class="chara_nav__btn" data-chara="1">
+                            <img src="assets/images/chara_icon_mikuri.png" alt="みくり" loading="lazy">
+                            <p>天宫美久栗</p>
+                        </li>
+                        <li class="chara_nav__btn" data-chara="2">
+                            <img src="assets/images/chara_icon_ichika.png" alt="莓华" loading="lazy">
+                            <p>御园莓华</p>
+                        </li>
+                        <li class="chara_nav__btn" data-chara="3">
+                            <img src="assets/images/chara_icon_nana.png" alt="ナナ" loading="lazy">
+                            <p>舞羽娜娜</p>
+                        </li>    
+                    </ul>
+                </div>
+                <div class="character_slider">
+                    <div class="chieri character_slider__item">
+                        <div class="character__info">
+                            <ul class="character__stdimg">
+                                <li>
+                                    <picture>
+                                        <source media="(max-width:1199px)" srcset="assets/images/chara_chieri_std1-sp.png 828w" sizes="100vw">
+                                        <source media="(min-width:1200px)" srcset="assets/images/chara_chieri_std1-pc.png 1400w" sizes="700px">
+                                        <img src="assets/images/chara_chieri_std1-pc.png" alt="" loading="lazy">
+                                    </picture>
+                                    <p class="prof__serif"><img src="assets/images/chara_chieri_serif.svg" alt="「我是不会妥协的。不偏向于哪边，无论打工还是学习都要努力」" loading="lazy"></p>
+                                </li>
+                            </ul>
+                            <div class="character__prof">
+                                <h3><img src="assets/images/chara_name_chieri.svg" alt="雪村千绘莉" loading="lazy"></h3>
+                                <p class="prof__actor"><span>CV.藤咲ウサ</span></p>
+                                <ul class="prof__voice">
+                                    <li class="voice" data-voice-link="./assets/voice/voice_chieri_1.m4a"><i class="icon ion-md-mic"></i><span>VOICE</span></li>
+                                    <li class="voice" data-voice-link="./assets/voice/voice_chieri_2.m4a"><i class="icon ion-md-mic"></i><span>VOICE</span></li>
+                                    <li class="voice" data-voice-link="./assets/voice/voice_chieri_3.m4a"><i class="icon ion-md-mic"></i><span>VOICE</span></li>
+                                </ul>
+                                <p class="prof__txt">
+                                    <em>打工的前辈，俄罗斯蓝猫的兽人。</em>
+                                    学籍比男主要小一年，却非常认真而且有责任感，想要早些成为一个合格的大人而进行着打工。个子很小却外表可爱，非常讨厌被当做小孩子对待。非常自立认真，的同时，经常会拒绝别人的好意。
+                                </p>
+                                <p class="prof__animal">俄罗斯蓝猫即便是在猫中也是最难以取悦的种类，独占欲嫉妒心强。</p>
+                                <div class="prof__spec">
+                                    <dl><dt>身高／体重／血型</dt><dd>145cm／40kg／A型</dd></dl>
+                                    <dl><dt>三围</dt><dd>B:74-A/W:53/H:77</dd></dl>
+                                    <dl><dt>学年</dt><dd>1年级</dd></dl>
+                                    <dl><dt>生日</dt><dd>2月22日</dd></dl>
+                                    <dl><dt>动物</dt><dd>ロシアンブルー</dd></dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mikuri character_slider__item">
+                        <div class="character__info">
+                            <ul class="character__stdimg">
+                                <li>
+                                    <picture>
+                                        <source media="(max-width:1199px)" srcset="assets/images/chara_mikuri_std1-sp.png 828w" sizes="100vw">
+                                        <source media="(min-width:1200px)" srcset="assets/images/chara_mikuri_std1-pc.png 1400w" sizes="700px">
+                                        <img src="assets/images/chara_mikuri_std1-pc.png" alt="" loading="lazy">
+                                    </picture>
+                                    <p class="prof__serif"><img src="assets/images/chara_mikuri_serif.svg" alt="「你肯定会有好事发生哦。因为神是这么说的！」" loading="lazy"></p>
+                                </li>
+                            </ul>
+                            <div class="character__prof">
+                                <h3><img src="assets/images/chara_name_mikuri.svg" alt="天宮みくり" loading="lazy"></h3>
+                                <p class="prof__actor"><span>CV.八ッ橋しなもん</span></p>
+                                <ul class="prof__voice">
+                                    <li class="voice" data-voice-link="assets/voice/voice_mikuri_1.m4a"><i class="icon ion-md-mic"></i><span>VOICE</span></li>
+                                    <li class="voice" data-voice-link="assets/voice/voice_mikuri_2.m4a"><i class="icon ion-md-mic"></i><span>VOICE</span></li>
+                                    <li class="voice" data-voice-link="assets/voice/voice_mikuri_3.m4a"><i class="icon ion-md-mic"></i><span>VOICE</span></li>
+                                </ul>
+                                <p class="prof__txt">
+                                    <em>来自只有兽人居住的地方名叫“兽人之乡”的女孩。</em>
+                                    与男主同年级，同一时间来到这里一起开始打工的女孩。天真无邪而且非常主动，好奇心旺盛，遇到好奇的事情会摇着尾巴义无反顾地向前进。在兽人之乡担当巫女，能够听到神的声音。据说来到夕渚镇，也是因为神告诉她的。
+                                </p>
+                                <p class="prof__animal">带有特征的博美犬，其中最突出的特征就是元气和黏人。</p>
+                                <div class="prof__spec">
+                                    <dl><dt>身高／体重／血型</dt><dd>154cm／46kg／O型</dd></dl>
+                                    <dl><dt>三围</dt><dd>B:86-D/W:57/H:86</dd></dl>
+                                    <dl><dt>学年</dt><dd>2年生</dd></dl>
+                                    <dl><dt>生日</dt><dd>11月10日</dd></dl>
+                                    <dl><dt>动物</dt><dd>博美</dd></dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ichika character_slider__item">
+                        <div class="character__info">
+                            <ul class="character__stdimg">
+                                <li>
+                                    <picture>
+                                        <source media="(max-width:1199px)" srcset="assets/images/chara_ichika_std1-sp.png 828w" sizes="100vw">
+                                        <source media="(min-width:1200px)" srcset="assets/images/chara_ichika_std1-pc.png 1400w" sizes="700px">
+                                        <img src="assets/images/chara_ichika_std1-pc.png" alt="" loading="lazy">
+                                    </picture>
+                                    <p class="prof__serif"><img src="assets/images/chara_ichika_serif.svg" alt="「如果乐意的话不来和我们一起工作吗？」" loading="lazy"></p>
+                                </li>
+                            </ul>
+                            <div class="character__prof">
+                                <h3><img src="assets/images/chara_name_ichika.svg" alt="御园莓华" loading="lazy"></h3>
+                                <p class="prof__actor"><span>CV.月白まひる</span></p>
+                                <ul class="prof__voice">
+                                    <li class="voice" data-voice-link="assets/voice/voice_ichika_1.m4a"><i class="icon ion-md-mic"></i><span>VOICE</span></li>
+                                    <li class="voice" data-voice-link="assets/voice/voice_ichika_2.m4a"><i class="icon ion-md-mic"></i><span>VOICE</span></li>
+                                    <li class="voice" data-voice-link="assets/voice/voice_ichika_3.m4a"><i class="icon ion-md-mic"></i><span>VOICE</span></li>
+                                </ul>    
+                                <p class="prof__txt">
+                                    <em>给人软绵绵的感觉，让人想要去守护她的女孩。</em>
+                                    给人软绵绵的感觉，让人想要去守护她的女孩。有着与态度强硬的娜娜截然不同的性格，却是她的老朋友。在无论Setaria还是Sweet Tail都由妈妈经营的店里打工。喜欢恋爱小说和少女漫画，实际上还有着难以对外人道的兴趣爱好……
+                                </p>
+                                <p class="prof__animal">聪明贤惠的贵宾犬，性格温柔体贴。</p>
+                                <div class="prof__spec">
+                                    <dl><dt>身高／体重／血型</dt><dd>150cm／43kg／AB型</dd></dl>
+                                    <dl><dt>三围</dt><dd>B:81-C/W:55/H:80</dd></dl>
+                                    <dl><dt>学年</dt><dd>2年级</dd></dl>
+                                    <dl><dt>生日</dt><dd>4月9日</dd></dl>
+                                    <dl><dt>动物</dt><dd>贵宾犬</dd></dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nana character_slider__item">
+                        <div class="character__info">
+                            <ul class="character__stdimg">
+                                <li>
+                                    <picture>
+                                        <source media="(max-width:1199px)" srcset="assets/images/chara_nana_std1-sp.png 828w" sizes="100vw">
+                                        <source media="(min-width:1200px)" srcset="assets/images/chara_nana_std1-pc.png 1400w" sizes="700px">
+                                        <img src="assets/images/chara_nana_std1-pc.png" alt="" loading="lazy">
+                                    </picture>
+                                    <p class="prof__serif"><img src="assets/images/chara_nana_serif.svg" alt="「才没啊！别把我们的耳朵与那边的道具混为一谈！」" loading="lazy"></p>
+                                </li>
+                            </ul>
+                            <div class="character__prof">
+                                <h3><img src="assets/images/chara_name_nana.svg" alt="舞羽娜娜" loading="lazy"></h3>
+                                <p class="prof__actor"><span>CV.朔羅ことね</span></p>
+                                <ul class="prof__voice">
+                                    <li class="voice" data-voice-link="assets/voice/voice_nana_1.m4a"><i class="icon ion-md-mic"></i><span>VOICE</span></li>
+                                    <li class="voice" data-voice-link="assets/voice/voice_nana_2.m4a"><i class="icon ion-md-mic"></i><span>VOICE</span></li>
+                                    <li class="voice" data-voice-link="assets/voice/voice_nana_3.m4a"><i class="icon ion-md-mic"></i><span>VOICE</span></li>
+                                </ul>
+                                <p class="prof__txt">
+                                    <em>元气活泼，性格强硬的少女</em>
+                                    说话腔调非常平易近人，没有女孩样，即便是初次见面的人也会非常直率地交流。对自己身为兽人非常自豪，却不喜欢被夸「可爱」而是喜欢被夸「帅气」，所以当被夸「可爱」的时候，都会用「才不可爱呢！」来顶回去。喜欢打游戏，不问类型平台全都玩。因为莓华从过去就经常被异性骚扰，所以会像老猫一样驱逐接近她的坏人。
+                                </p>
+                                <p class="prof__animal">美国短毛猫，元气活泼，而且态度强硬</p>
+                                <div class="prof__spec">
+                                    <dl><dt>身高／体重／血液型</dt><dd>157cm／48kg／B型</dd></dl>
+                                    <dl><dt>三围</dt><dd>B:87-E/W:57/H:83</dd></dl>
+                                    <dl><dt>学年</dt><dd>2年级</dd></dl>
+                                    <dl><dt>生日</dt><dd>8月7日</dd></dl>
+                                    <dl><dt>动物</dt><dd>美国短毛猫</dd></dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="jquery_jplayer_1"></div>
+        <script src="./assets/js/index.min.js"></script>
+</body>
+</html>

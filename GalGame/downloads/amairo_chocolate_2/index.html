@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>巧克甜恋2_相关下载页</title>
     <link href="../../libs/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/@waline/client@v2/dist/waline.css" rel="stylesheet">
     <style>
         a, a:hover {
             text-decoration: none;
@@ -112,9 +113,12 @@
     <footer class="text-muted py-5">
         <div class="container">
         <p class="float-end mb-1">
-            <a href="#">返回顶部</a>
+            <a href="javascript:void(0)" id="back-to-top" onclick="topFunction()">返回顶部</a>
         </p>
         <p class="mb-1">页面模板出自 &copy; HIKARI FIELD STORE</p>
+        <p class="float-end mb-1">
+            阅读量:<span class="waline-pageview-count" data-path="/GalGame/download/amairo_chocolate_2/">加载中</span>
+        </p>
         <p class="mb-0">页面协助 Bing Ai 和 F12</p>
         </div>
     </footer>
@@ -191,6 +195,23 @@
     <script>
         document.getElementById("btnmoon").onclick = function() {
             window.location.href = "https://www.icourse163.org/";
+        }
+    </script>
+    <script type="module">
+        import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    
+        init({
+          el: '#waline',
+          pageview: true,
+          serverURL: 'https://wa.hychuyi.tk/',
+        });
+    </script>
+    <script>
+        function topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     </script>
 </body>

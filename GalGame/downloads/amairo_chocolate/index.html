@@ -48,8 +48,8 @@
         <div class="container">
             <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
-                <h4 class="text-white">text-muted</h4>
-                <p class="text-light">《星空列车与白的旅行》（星空鉄道とシロの旅）是由白玉社（しらたまこ）制作发行的全年龄文字冒险游戏，由Syawase Works于2021年5月14日代理发行该作的Steam中文版。</p>
+                <h4 class="text-white">关于</h4>
+                <p class="text-light">《巧克甜恋》（日语：あまいろショコラータ）是由Cabbage Soft制作发行的系列恋爱文字冒险游戏，Steam版由Sekai Project代理。</p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
                 <h4 class="text-white">友情链接</h4>
@@ -76,6 +76,22 @@
         </div>
     </header>
     <main class="main bg-light">
+        <section class="banner">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000" >
+                        <img src="../../shops/amairo_chocolate/images/banner.png" class="d-block w-100" alt="巧克甜恋">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000" >
+                        <img src="../../shops/amairo_chocolate/images/banner1.png" class="d-block w-100" alt="巧克甜恋">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000" >
+                        <img src="../../shops/amairo_chocolate/images/banner2.png" class="d-block w-100" alt="巧克甜恋">
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
         <div class="page-content px-3 py-4 px-md-4 px-lg-5">
             <div role="alert" class="alert alert-success text-center mb-0">
                 <h2 class="text-body">巧克甜恋_相关下载页</h2>
@@ -96,15 +112,15 @@
         <section class="page-content px-3 py-4 px-md-4 px-lg-5">
         <div class="downloads box">
             <div class="title">
-                <h3>安全提示(分流补丁)<small>(2023.07.21)</small></h3>
+                <h3>安全提示(分流补丁)<small>(2023.09.29)</small></h3>
             </div>
             <div class="open-url mt-3">
                 <p>您即将离开本站并跳转至以下网址，该网页内容与本站无关，请确认是否继续访问？</p>
                 <p>点击下方链接及表示您同意</p>
-                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="百度网盘">百度网盘</button>
+                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="百度网盘">百度网盘(tpqu)</button>
                 <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="OneDrive">OneDrive</button>
-                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="阿里云盘">阿里云盘</button>
-                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="Google盘">Google盘</button>
+                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="阿里云盘">阿里云盘(19nl)</button>
+                <button type="button" class="btn btn-primary mt-3 disabled" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="Google盘">Google盘</button>
             </div>
         </div>
         </section>
@@ -112,9 +128,12 @@
     <footer class="text-muted py-5">
         <div class="container">
         <p class="float-end mb-1">
-            <a href="#">返回顶部</a>
+            <a href="javascript:void(0)" id="back-to-top" onclick="topFunction()">返回顶部</a>
         </p>
         <p class="mb-1">页面模板出自 &copy; HIKARI FIELD STORE</p>
+        <p class="float-end mb-1">
+            阅读量:<span class="waline-pageview-count" data-path="/GalGame/download/amairo_chocolate_2/">加载中</span>
+        </p>
         <p class="mb-0">页面协助 Bing Ai 和 F12</p>
         </div>
     </footer>
@@ -165,9 +184,9 @@
     <script>
         const exampleModal = document.getElementById('tips')
         const links = {
-            "百度网盘": "https://pan.baidu.com/",
-            "OneDrive": "https://onedrive.live.com/",
-            "阿里云盘": "https://www.aliyundrive.com/",
+            "百度网盘": "https://pan.baidu.com/s/12I0vYeXZF5Rq6SK5_fPovQ?pwd=tpqu",
+            "OneDrive": "https://pan.mikublog.repl.co/s/N8TR",
+            "阿里云盘": "https://www.aliyundrive.com/s/GmKLbRPSPk3",
             "Google盘": "https://drive.google.com/"
         };
         if (exampleModal) {
@@ -191,6 +210,23 @@
     <script>
         document.getElementById("btnmoon").onclick = function() {
             window.location.href = "https://www.icourse163.org/";
+        }
+    </script>
+    <script type="module">
+        import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    
+        init({
+            el: '#waline',
+            pageview: true,
+            serverURL: 'https://wa.hychuyi.tk/',
+        });
+    </script>
+    <script>
+        function topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     </script>
 </body>
