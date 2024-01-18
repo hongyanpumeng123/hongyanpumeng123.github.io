@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>巧克甜恋2_相关下载页</title>
     <link href="../../libs/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/@waline/client@v2/dist/waline.css" rel="stylesheet">
+    <link href="../../libs/waline@2.15.8/waline.css" rel="stylesheet">
     <style>
         a, a:hover {
             text-decoration: none;
@@ -121,7 +121,6 @@
                 <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="百度网盘">百度网盘(s8ms)</button>
                 <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="OneDrive">OneDrive(baiyv)</button>
                 <button type="button" class="btn btn-primary mt-3 disabled" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="阿里云盘">阿里云盘</button>
-                <button type="button" class="btn btn-primary mt-3 disabled" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="Google盘">Google盘</button>
             </div>
         </div>
         </section>
@@ -190,25 +189,56 @@
         </div>
     </div>
     <script src="../../libs/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../../libs/sweetalert2/sweetalert2@9.js"></script>
     <!-- https://getbootstrap.com/docs/5.3/components/modal/#varying-modal-content -->
     <script>
-        const exampleModal = document.getElementById('tips')
+        const exampleModal = document.getElementById('tips');
         const links = {
             "百度网盘": "https://pan.baidu.com/s/1UkDC-vOXRpDizUEzfKJX3g?pwd=s8ms",
-            "OneDrive": "https://pan.mikublog.repl.co/s/E7cm",
+            "OneDrive": "https://cloud.hychuyi.com/s/E7cm?password=baiyv",
             "阿里云盘": "https://www.aliyundrive.com/",
-            "Google盘": "https://drive.google.com/"
         };
+    
         if (exampleModal) {
             exampleModal.addEventListener('show.bs.modal', event => {
-                const button = event.relatedTarget
-                const recipient = button.getAttribute('data-bs-whatever')
-                const modalTitle = exampleModal.querySelector('.btn-server')
-                modalTitle.textContent = `我已满18岁，前往${recipient}`
-                modalTitle.onclick = function() {
-                    window.location.href = links[recipient];
+                const button = event.relatedTarget;
+                const recipient = button.getAttribute('data-bs-whatever');
+                const modalTitle = exampleModal.querySelector('.btn-server');
+    
+                modalTitle.textContent = `我已满18岁，前往${recipient}`;
+    
+                modalTitle.onclick = function () {
+                    if (recipient === "百度网盘"){
+                        let timerInterval
+                        Swal.fire({
+                            icon: 'warning',
+                            title: '请注意文件解压密码为1234',
+                            html: '<b></b>毫秒后跳转至百度网盘',
+                            timer: 3000,
+                            timerProgressBar: true,
+                            onBeforeOpen: () => {
+                                Swal.showLoading()
+                                timerInterval = setInterval(() => {
+                                const content = Swal.getContent()
+                                if (content) {
+                                    const b = content.querySelector('b')
+                                    if (b) {
+                                    b.textContent = Swal.getTimerLeft()
+                                    }
+                                }
+                                }, 100)
+                            },
+                            onClose: () => {
+                                clearInterval(timerInterval)
+                            }
+                        }).then(() => {
+                                window.location.href = links[recipient];
+                            })
+                    }else{
+                        window.location.href = links[recipient];
+                    }
                 }
-            })
+            });
         }
     </script>
     <script>
@@ -223,7 +253,7 @@
         }
     </script>
     <script type="module">
-        import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+        import { init } from '../../libs/waline@2.15.8/waline.mjs';
     
         init({
             el: '#waline',

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ico.ico">
+    <title>GINKA_Gal记录页</title>
+    <link href="../../libs/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../libs/apps/index.css" rel="stylesheet">
+    <link href="../../libs/chart/chart.min.css" rel="stylesheet">
+    <link href="../../libs/jquery.fancybox/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="../../libs/iconfont/iconfont.css" rel="stylesheet">
+    <link href="../../libs/apps/apps.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <link href="../../libs/waline@2.15.8/waline.css" rel="stylesheet">
+    <style>
+        /* 自主调试区 */
+        .shop-body .inner .game-staff .table-wrap {
+            padding-top: .5rem
+        }
+
+        .shop-body .inner .game-staff .table-wrap .staff-table {
+            border-collapse: separate;
+            font-size: .9rem
+        }
+
+        .shop-body .inner .game-staff .table-wrap .staff-table th {
+            background-color: #f0f0f0;
+            margin: 2px;
+            padding: .3rem .4rem;
+            text-align: center;
+            word-break: keep-all;
+            
+        }
+
+        .shop-body .inner .game-staff .table-wrap .staff-table td {
+            background-color: #f0f0f0;
+            margin: 2px;
+            padding: .3rem .4rem;
+            word-break: break-all;
+            text-align: center
+        }
+        .story_box_text_allc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .introduction .wrap .row p {
+            margin-top: 1.2em;
+        }
+        /* 针对图片比例不是16:9 */
+        img{object-fit: cover; transition: all 1s ease 0s; object-position: left top}
+        img:hover {object-position: right bottom;}
+        /* 介绍超出两行变成省略号 */
+        .test-hidden-subtitle-h4 {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; height:3.5em;}
+        #hid{display:none!important}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-md-7 py-4">
+                <h4 class="text-white">关于</h4>
+                <p class="text-light">GINKA</p>
+              </div>
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h4 class="text-white">友情链接</h4>
+                <ul class="list-unstyled">
+                  <li><a href="https://store.hikarifield.co.jp/shops" target="_blank" class="link-warning">HIKARI FIELD STORE官网</a></li>
+                  <li><a href="https://store.steampowered.com/" target="_blank" class="link-warning">STEAM官网</a></li>
+                  <li><a href="https://sekaiproject.com/project-status/" target="_blank" class="link-warning">Sekai Project官网</a></li>
+                  <li><a href="https://www.yuzu-soft.com/products.html" target="_blank" class="link-warning">YUZU-SOFT官网</a></li>
+                  <!-- <li><a href="#" target="_blank" class="text-white">Email me</a></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+          <div class="container">
+            <a href="javascript:window.history.back(-1);" class="navbar-brand d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <strong>GalGame记录页</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+    </header>
+    <!-- 顶部警告提示 -->
+    <div class="top-notice">
+        <div role="alert" class="alert alert-warning text-center mb-0">
+            当前页面搭建程度为70%，目前打算使用springboot+bootstrap或vue3重制
+        </div>
+    </div>
+    <main class="app">
+        <section class="banner">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2200">
+                        <img src="./images/banner.webp" class="d-block w-100" data-bs-interval="1000" alt="GINKA">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="shop-top">
+            <div class="inner">
+                <div class="row mb-3 px-4">
+                    <h1 class="col-12 col-md p-0">GINKA</h1>
+                    <div class="col-12 col-md-auto">
+                        <span class="btn btn-warning btn-favor"><span class="iconfont"></span> 阅读量:<span class="waline-pageview-count" data-path="/GalGame/shops/ginka/">加载中</span>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="shop-carousel">
+                        <div class="bd-example-snippet bd-code-snippet">
+                            <div class="bd-example">
+                                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10" aria-label="Slide 11" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11" aria-label="Slide 12" class=""></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12" aria-label="Slide 13" class=""></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                                <a data-fancybox data-type="iframe" data-width="1280" data-height="720" href="https://player.bilibili.com/player.html?bvid=BV128411i7YJ">
+                                                <img data-src="../../images/ginka.jpg" class="d-block w-100 lazyload">
+                                                <img data-src="../../images/common/video_play_btn.png" class="d-block w-100 video-play-btn lazyload"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                                <a data-fancybox data-type="iframe" data-width="1280" data-height="720" href="https://player.bilibili.com/player.html?bvid=BV1Qj411z7UL">
+                                                <img data-src="./images/thumb/ginka_logo.jpg" class="d-block w-100 lazyload">
+                                                <img data-src="../../images/common/video_play_btn.png" class="d-block w-100 video-play-btn lazyload"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_5af08d99285fe4d71a19620bc27e528198dc4271.1920x1080.jpg?t=1702883298">
+                                                <img data-src="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_5af08d99285fe4d71a19620bc27e528198dc4271.1920x1080.jpg?t=1702883298" class="d-block w-100 lazyload"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_5ce83a5a29ae12894af12a698ed843db7c3f2283.1920x1080.jpg?t=1702883298">
+                                                <img data-src="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_5ce83a5a29ae12894af12a698ed843db7c3f2283.1920x1080.jpg?t=1702883298" class="d-block w-100 lazyload"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_09ab156b0b93b3f47b12b829f4012b3e84caf412.1920x1080.jpg?t=1702883298">
+                                                <img data-src="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_09ab156b0b93b3f47b12b829f4012b3e84caf412.1920x1080.jpg?t=1702883298" class="d-block w-100 lazyload"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_eff5c90b94bd3100c48b8af54ed29ca6619dfcf7.1920x1080.jpg?t=1702883298">
+                                                <img data-src="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_eff5c90b94bd3100c48b8af54ed29ca6619dfcf7.1920x1080.jpg?t=1702883298" class="d-block w-100 lazyload"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_25bcd1d2400d2004ae7ca73722f8d164ad0c20ee.1920x1080.jpg?t=1702883298">
+                                                <img data-src="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_25bcd1d2400d2004ae7ca73722f8d164ad0c20ee.1920x1080.jpg?t=1702883298" class="d-block w-100 lazyload"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_abfea844fce3d9709b353c627a0e54ef39ad7376.1920x1080.jpg?t=1702883298">
+                                                <img data-src="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_abfea844fce3d9709b353c627a0e54ef39ad7376.1920x1080.jpg?t=1702883298" class="d-block w-100 lazyload"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_266e91613e1a4a8f4eca0cc1bd7c5c7b74361b48.1920x1080.jpg?t=1702883298">
+                                                <img data-src="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_266e91613e1a4a8f4eca0cc1bd7c5c7b74361b48.1920x1080.jpg?t=1702883298" class="d-block w-100 lazyload"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_7f6cd4ef32157a8bbfd8f1bc6f0628184fb7b1e8.1920x1080.jpg?t=1702883298">
+                                                <img data-src="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_7f6cd4ef32157a8bbfd8f1bc6f0628184fb7b1e8.1920x1080.jpg?t=1702883298" class="d-block w-100 lazyload"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_b38f6c877150d8c997d83457ff5e984ce3c0782d.1920x1080.jpg?t=1702883298">
+                                                <img data-src="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_b38f6c877150d8c997d83457ff5e984ce3c0782d.1920x1080.jpg?t=1702883298" class="d-block w-100 lazyload"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_4889363bc4d8347967175567b83b43de687a1474.1920x1080.jpg?t=1702883298">
+                                                <img data-src="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_4889363bc4d8347967175567b83b43de687a1474.1920x1080.jpg?t=1702883298" class="d-block w-100 lazyload"></a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a data-fancybox="images" href="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_aef20d0463291d173ca89be2f88dd1369bbb3e71.1920x1080.jpg?t=1702883298">
+                                                <img data-src="https://media.st.dl.eccdnx.com/steam/apps/2536840/ss_aef20d0463291d173ca89be2f88dd1369bbb3e71.1920x1080.jpg?t=1702883298" class="d-block w-100 lazyload"></a>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                                        data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                                        data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="player-vote">
+                        <h4>玩家评价</h4>
+                        <div class="player-vote-chart my-3">
+                            <canvas id="player-vote-chart-area"></canvas>
+                        </div>
+                    </div>
+                    <div class="start-vote">
+                        <a href="https://store.hikarifield.co.jp/shop/yumahorome/vote" class="btn btn-block btn-warning disabled">进行评价<small>（可获得积分奖励）</small></a>
+                    </div>
+                    <div class="game-info">
+                        <h4>游戏信息</h4>
+                        <div class="wrap">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <th>游戏名称</th>
+                                        <td>GINKA</td>
+                                    </tr>
+                                    <tr>
+                                        <th>游戏类型</th>
+                                        <td>虚拟小说</td>
+                                    </tr>
+                                    <tr>
+                                        <th>游戏品牌</th>
+                                        <td>Frontwing</td>
+                                    </tr>
+                                    <tr>
+                                        <th>发行商</th>
+                                        <td>Frontwing USA, Bushiroad Inc.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>面向年龄</th>
+                                        <td>全年龄</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="game-hp">
+                        <a href="http://ginka.frontwing.jp/cn/" target="_blank" class="btn btn-block btn-warning">游戏中文官网</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="shop-body">
+            <div class="inner">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <section class="buy-game mb-3">
+                            <div class="product-box ">
+                                <div class="row">
+                                    <div class="wm-100"><!-- col-12 col-lg-9 pt-2  wm-100-->
+                                        <h4>购买: GINKA
+                                            <small>
+                                                <a href="https://store.steampowered.com/app/2536840/GINKA/" target="_blank" class="price">(从STEAM购买)</a>
+                                            </small>
+                                        </h4>
+                                        <div class="discount-detail">
+                                            <ul class="discount-list">
+                                                <li>促销期间享受促销价格<span class="price">70.4元</span>。</li>
+                                            </ul>
+                                            <br>
+                                            <iframe title="前往STEAM购买" src="https://store.steampowered.com/widget/2536840/" frameborder="0" width="100%" height="190"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="introduction mb-3">
+                            <h3>游戏介绍</h3>
+                            <div class="wrap">
+                                <div class="row scroll-reveal">
+                                    <div class="wm-100 fade-in">
+                                       <img data-src="./images/intro/story_img01.jpg" alt="top" class="img-fluid lazyload" style="min-width: 100%;">
+                                    </div>
+                                  </div>
+                                <div class="row scroll-reveal">
+                                    <div class="wm-100 fade-in">
+                                      <p class="story_box_text_allc" style="font-size: 1.5em;line-height: 1.7em;">
+                                        少女银花与主人公青羽流星是青梅竹马。<br>
+                                        某个夏日祭的夜晚，银花遭遇神隐，消失得无影无踪。<br>
+                                      </p>
+                                    </div>
+                                  </div>
+                                <div class="row scroll-reveal">
+                                    <div class="col-md-6 fade-in">
+                                      <img data-src="./images/intro/story_img02.jpg" alt="Image 1" class="img-fluid lazyload">
+                                    </div>
+                                    <div class="col-md-6 fade-in">
+                                      <p>自事件发生之后，已经过去了五年。<br>
+                                        成为了高中生的青羽流星乘坐渡轮，重返姬之岛。<br>
+                                        此行的目的，是为了确认银花自那之后的情况。<br>
+                                        说不定，她已经平安无事地回到家中，<br>
+                                        现在正就读于岛上的高中，过着平凡的生活……</p>
+                                    </div>
+                                  </div>
+                                  <div class="row scroll-reveal">
+                                    <div class="col-md-6 fade-in">
+                                      <p>然而，淡淡的期待还是落空了。<br>
+                                        自那一夜起，银花便不知所踪。<br>
+                                        流星陷入失意，打算离开姬之岛。<br>
+                                        就在这时，他经历了一场不可思议的重逢。<br>
+                                        </p>
+                                        <p style="font-size: 1.5em;line-height: 1.7em;">
+                                            出现在他面前的，<br>
+                                            是仍保持旧时模样的少女——Ginka。
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6 fade-in">
+                                      <img data-src="./images/intro/story_img03.jpg" alt="Image 1" class="img-fluid lazyload">
+                                    </div>
+                                  </div>
+                                  <div class="row scroll-reveal">
+                                    <div class="col-md-6 fade-in">
+                                      <img data-src="./images/intro/story_img04.jpg" alt="Image 2" class="img-fluid lazyload">
+                                    </div>
+                                    <div class="col-md-6 fade-in">
+                                        <p style="padding-top: 1.2em; font-size: 1.5em;line-height: 1.7em;">
+                                            “&nbsp;&nbsp;欢&nbsp;&nbsp;迎&nbsp;&nbsp;回&nbsp;&nbsp;来&nbsp;&nbsp;”
+                                        </p>
+                                    </div>
+                                  </div>
+                                  <div class="row scroll-reveal">
+                                    <div class="col-md-4 fade-in">
+                                      <p>Ginka连自己的名字都已不记得。<br>
+                                        <br>
+                                        她只记得“流星”这一名字，<br>
+                                        以及对他的恋慕之情。<br>
+                                        <br>
+                                        </p>
+                                        <p style="font-size: 1.5em;line-height: 1.7em;">
+                                            迄今为止，她到底身处何方？<br>
+                                            为何仍是年幼时的模样？<br>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-8 fade-in">
+                                      <img data-src="./images/intro/story_img05.jpg" alt="Image 3" class="img-fluid lazyload">
+                                    </div>
+                                  </div>
+                                  <div class="row scroll-reveal">
+                                    <div class="wm-100 fade-in">
+                                      <p class="story_box_text_allc" style="font-size: 1.5em;line-height: 1.7em;">
+                                        流星将在这座生活节奏缓慢的小小岛屿上，<br>
+                                        与从神隐归来的青梅竹马之友一起，<br>
+                                        度过宛如童话般的暑假。
+                                      </p>
+                                    </div>
+                                  </div>
+                            </div>
+                            <!-- <h3>角色介绍</h3>
+                            <div class="wrap">
+                                <div class="intro-pic">
+                                    <a data-fancybox="images" href="./images/intro/Character.png">
+                                        <img src="./images/intro/Character.png" alt="" srcset="" class="d-block w-100">
+                                    </a>
+                                </div>
+                            </div> -->
+                        </section>
+                        <section class="recommends">
+                            <div class="row">
+                                <div class="mb-4 col-12 col-lg-6">
+                                    <h3 class="mb-3">相近题材产品</h3> <a href="../amairo_chocolate/"><img
+                                            src="../../images/Amairo-Chocolate.webp">
+                                        <div class="img-mask"></div>
+                                    </a>
+                                </div>
+                                <div class="mb-4 col-12 col-lg-6">
+                                    <h3 class="mb-3">相近题材产品</h3> 
+                                    <a href="../shiratamaco/" class="ratio ratio-16x9"><img src="../../images/mv-w2560-3.webp" class="figure-img img-fluid"></a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <section class="download">
+                            <h4>相关资源</h4>
+                            <div class="py-3 wrap">
+                                <span><a target="_blank" href="../../downloads/ginka/tactics.html"
+                                    class="btn btn-block btn-warning disabled">简明攻略</a></span>
+                            </div>
+                        </section>
+                        <section class="game-language">
+                            <h4>游戏语言</h4>
+                            <div class="table-wrap">
+                                <table class="language-table table table-sm table-borderless">
+                                    <thead class="bg-warning">
+                                        <tr>
+                                            <th>语言 / 项目</th>
+                                            <th>界面</th>
+                                            <th>完全音频</th>
+                                            <th>字幕</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>简体中文</th>
+                                            <td>
+                                                ✔
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                ✔
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>繁体中文</th>
+                                            <td>
+                                                ✔
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                ✔
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>日文</th>
+                                            <td>
+                                                ✔
+                                            </td>
+                                            <td>
+                                                ✔
+                                            </td>
+                                            <td>
+                                                ✔
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>英文</th>
+                                            <td>
+                                                ✔
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                ✔
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="game-staff mt-4">
+                            <h4>STAFF</h4>
+                            <div class="table-wrap">
+                                <table class="staff-table table table-sm table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <th>企划/剧本</th>
+                                            <td>紺野アスタ</td>
+                                        </tr>
+                                        <tr>
+                                            <th>原画/角色设计</th>
+                                            <td>Yusano</td>
+                                        </tr>
+                                        <tr>
+                                            <th>配角设计</th>
+                                            <td>渡边明夫</td>
+                                        </tr>
+                                        <tr>
+                                            <th>SD原画</th>
+                                            <td>ななかまい</td>
+                                        </tr>
+                                        <tr>
+                                            <th>音乐</th>
+                                            <td>松本文纪</td>
+                                        </tr>
+                                        <tr>
+                                            <th>语音</th>
+                                            <td>主人公以外全角色语音</td>
+                                        </tr>
+                                        <tr>
+                                            <th>片头主题曲</th>
+                                            <td>《Star Trail》<br>
+                                                歌唱：四之宫银花<br>
+                                                （CV：长谷川育美）<br>
+                                                作编曲：松本文纪<br>
+                                                作词：紺野アスタ</td>
+                                        </tr>
+                                        <tr>
+                                            <th>片尾主题曲</th>
+                                            <td>《梦浮桥-Bridge of Dreams-》<br>
+                                                歌唱：青木阳菜<br>
+                                                作编曲：UNDER_COVERS<br>
+                                                作词：mido</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="game-sysreq mt-4">
+                            <h4>系统需求</h4>
+                            <div class="table-wrap">
+                                <table class="sysreq-table table table-sm table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <th>操作系统</th>
+                                            <td>Windows 11 / 10 (32/64bit)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>CPU</th>
+                                            <td>Intel® Core™ i3及以上</td>
+                                        </tr>
+                                        <tr>
+                                            <th>内存</th>
+                                            <td>1GB以上</td>
+                                        </tr>
+                                        <tr>
+                                            <th>分辨率</th>
+                                            <td>1280x720</td>
+                                        </tr>
+                                        <tr>
+                                            <th>显存</th>
+                                            <td>320MB</td>
+                                        </tr>
+                                        <tr>
+                                            <th>硬盘空间</th>
+                                            <td>6GB以上</td>
+                                        </tr>
+                                        <tr>
+                                            <th>DirectX</th>
+                                            <td>9.0c</td>
+                                        </tr>
+                                        <tr>
+                                            <th>声卡</th>
+                                            <td>PCM</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="game-reviews mt-4">
+                            <h4>游戏感评</h4>
+                            <div class="list-group">
+                                <div id="waline"></div>
+                            </div>
+                            <div>
+                                <a class="btn btn-block btn-warning mt-2 disabled" href="#">我要发表感评</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="text-muted py-5">
+        <div class="container">
+          <p class="float-end mb-1">
+            <a href="javascript:void(0)" id="back-to-top" onclick="topFunction()">返回顶部</a>
+          </p>
+          <p class="mb-1">页面模板出自 &copy; HIKARI FIELD STORE</p>
+          <p class="mb-0">F12</p>
+        </div>
+    </footer>
+      
+<!-- <script src="https://cdn.bootcdn.net/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script> -->
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/lazysizes/5.3.2/lazysizes.min.js"></script>
+<script src="../../libs/bootstrap-5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="../../libs/chart/chart.min.js"></script>
+<script src="../../libs/jquery/jquery.min.js"></script>
+<script src="../../libs/jquery.fancybox/jquery.fancybox.min.js"></script>
+
+<!-- 自定义JavaScript代码，使用ScrollReveal库 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 初始化ScrollReveal
+      const sr = ScrollReveal();
+  
+      // 定义渐显效果配置
+      sr.reveal('.fade-in', {
+        duration: 1000, // 动画持续时间（1秒）
+        origin: 'bottom', // 从底部出现
+        distance: '50px', // 出现的距离
+        delay: 200, // 延迟200毫秒
+      });
+    });
+  </script>
+  
+<!-- 右侧玩家评价 -->
+
+<script>
+    window.chartColors = {
+        red: 'rgb(255, 99, 132)',
+        orange: 'rgb(255, 159, 64)',
+        yellow: 'rgb(255, 205, 86)',
+        green: 'rgb(75, 192, 192)',
+        blue: 'rgb(54, 162, 235)',
+        purple: 'rgb(153, 102, 255)',
+        grey: 'rgb(201, 203, 207)'
+    };
+
+    var ctx = document.getElementById("player-vote-chart-area");
+
+    var data = {
+        datasets: [{
+            data: [47,30,14,9],
+            backgroundColor: [
+                window.chartColors.red,
+                window.chartColors.yellow,
+                window.chartColors.green,
+                window.chartColors.blue,
+            ],
+        }],
+        labels: [
+            "原画•角色",
+            "剧情",
+            "音乐•音效",
+            "演出•系统"
+        ]
+    };
+
+    var options = {
+        legend: {
+            position: 'right',
+        },
+        tooltips: {
+            enabled: true,
+            mode: 'single',
+            callbacks: {
+                label: function (tooltipItem, data) {
+                    return data.datasets[0].data[tooltipItem.index] +
+                        "%的玩家认为该游戏的" +
+                        data.labels[tooltipItem.index] +
+                        "很赞";
+                }
+            }
+        }
+    };
+
+    var myPieChart = new Chart(ctx, {
+        type: "pie",
+        data: data,
+        options: options,
+    });
+</script>
+<!-- 图片预加载 (Test) -->
+<script defer>
+    const carousel = document.getElementById("carouselExampleCaptions");
+    const carouselItems = carousel.querySelectorAll(".carousel-item");
+
+    carousel.addEventListener("slid.bs.carousel", function () {
+        const activeItem = carousel.querySelector(".carousel-item.active");
+        const nextItem = activeItem.nextElementSibling;
+
+        if (nextItem) {
+            const img = nextItem.querySelector("img");
+            const src = img.getAttribute("data-src");
+            img.setAttribute("src", src);
+        }
+    });
+</script>
+<!-- 激活工具提示 -->
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<script type="module">
+    import { init } from '../../libs/waline@2.15.8/waline.mjs';
+
+    init({
+      el: '#waline',
+      pageview: true,
+      serverURL: 'https://wa.hychuyi.tk/',
+      emoji: [
+        '//unpkg.com/@waline/emojis@1.1.0/tieba',
+        '//unpkg.com/@waline/emojis@1.1.0/bilibili',
+        ],
+    });
+</script>
+<script>
+    function topFunction() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+</body>
+</html>

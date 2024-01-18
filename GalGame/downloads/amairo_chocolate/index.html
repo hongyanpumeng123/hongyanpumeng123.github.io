@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>巧克甜恋_相关下载页</title>
     <link href="../../libs/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/@waline/client@v2/dist/waline.css" rel="stylesheet">
+    <link href="../../libs/waline@2.15.8/waline.css" rel="stylesheet">
     <style>
         a, a:hover {
             text-decoration: none;
@@ -121,7 +121,6 @@
                 <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="百度网盘">百度网盘(tpqu)</button>
                 <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="OneDrive">OneDrive(推荐)</button>
                 <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="阿里云盘">阿里云盘(19nl)</button>
-                <button type="button" class="btn btn-primary mt-3 disabled" data-bs-toggle="modal" data-bs-target="#tips" data-bs-whatever="Google盘">Google盘</button>
             </div>
         </div>
         </section>
@@ -195,9 +194,8 @@
         const exampleModal = document.getElementById('tips')
         const links = {
             "百度网盘": "https://pan.baidu.com/s/12I0vYeXZF5Rq6SK5_fPovQ?pwd=tpqu",
-            "OneDrive": "https://pan.mikublog.repl.co/s/N8TR",
+            "OneDrive": "https://cloud.hychuyi.com/s/N8TR",
             "阿里云盘": "https://www.aliyundrive.com/s/GmKLbRPSPk3",
-            "Google盘": "https://drive.google.com/"
         };
         if (exampleModal) {
             exampleModal.addEventListener('show.bs.modal', event => {
@@ -223,7 +221,7 @@
         }
     </script>
     <script type="module">
-        import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+        import { init } from '../../libs/waline@2.15.8/waline.mjs';
     
         init({
             el: '#waline',
