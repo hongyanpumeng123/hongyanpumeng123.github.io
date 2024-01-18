@@ -12,7 +12,7 @@
     <link href="../../libs/jquery.fancybox/jquery.fancybox.min.css" rel="stylesheet">
     <link href="../../libs/iconfont/iconfont.css" rel="stylesheet">
     <link href="../../libs/apps/apps.css" rel="stylesheet">
-    <link href="https://unpkg.com/@waline/client@v2/dist/waline.css" rel="stylesheet">
+    <link href="../../libs/waline@2.15.8/waline.css" rel="stylesheet">
     <style>
         /* 自主调试区 */
         /* 介绍超出两行变成省略号 */
@@ -525,7 +525,7 @@
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 </script>
 <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+    import { init } from '../../libs/waline@2.15.8/waline.mjs';
 
     init({
       el: '#waline',
