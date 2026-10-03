@@ -12,7 +12,7 @@
     <link href="../../libs/jquery.fancybox/jquery.fancybox.min.css" rel="stylesheet">
     <link href="../../libs/iconfont/iconfont.css" rel="stylesheet">
     <link href="../../libs/apps/apps.css" rel="stylesheet">
-    <link href="../../libs/waline@2.15.8/waline.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
     <style>
         /* 自主调试区 */
         /* 介绍超出两行变成省略号 */
@@ -525,16 +525,16 @@
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 </script>
 <script type="module">
-    import { init } from '../../libs/waline@2.15.8/waline.mjs';
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
 
     init({
-      el: '#waline',
-      pageview: true,
-      serverURL: 'https://wa.hychuyi.tk/',
-      emoji: [
-        '//unpkg.com/@waline/emojis@1.1.0/tieba',
-        '//unpkg.com/@waline/emojis@1.1.0/bilibili',
-        ],
+        el: '#waline',
+        pageview: true,
+        serverURL: 'https://hymiku.dpdns.org/',
+        emoji: [
+            '//unpkg.com/@waline/emojis@1.4.0/tieba',
+            '//unpkg.com/@waline/emojis@1.4.0/bilibili'
+        ]
     });
 </script>
 <script>
